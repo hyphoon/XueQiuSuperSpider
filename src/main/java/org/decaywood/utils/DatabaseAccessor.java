@@ -37,7 +37,7 @@ public class DatabaseAccessor {
                 "com.mysql.jdbc.Driver",
                 "jdbc:mysql://localhost:3306/XueQiuSpider",
                 "root",
-                "123456"
+                "123"
         );
     }
 

@@ -1,3 +1,4 @@
+import entryFirst.UserInfoToDBAcceptor;
 import mapperTest.TestCaseGenerator;
 import org.decaywood.collector.*;
 import org.decaywood.entity.*;
@@ -10,6 +11,7 @@ import org.decaywood.mapper.industryFirst.IndustryToStocksMapper;
 import org.decaywood.mapper.stockFirst.StockToLongHuBangMapper;
 import org.decaywood.mapper.stockFirst.StockToStockWithAttributeMapper;
 import org.decaywood.mapper.stockFirst.StockToStockWithStockTrendMapper;
+import org.decaywood.mapper.stockFirst.StockToVIPFollowerCountEntryMapper;
 import org.decaywood.utils.MathUtils;
 import org.junit.Test;
 
@@ -92,8 +94,8 @@ public class StreamTest {
 
 
     //统计股票5000粉以上大V个数，并以行业分类股票 （耗时过长）
- /*   @Test
-    public void getStocksWithVipFollowersCount() {
+    @Test
+    public void getStocksWithVipFollowersCount() throws RemoteException {
         CommissionIndustryCollector collector = new CommissionIndustryCollector();//搜集所有行业
         IndustryToStocksMapper mapper = new IndustryToStocksMapper();//搜集每个行业所有股票
         StockToVIPFollowerCountEntryMapper mapper1 = new StockToVIPFollowerCountEntryMapper(5000, 300);//搜集每个股票的粉丝
@@ -109,7 +111,7 @@ public class StreamTest {
         for (Entry<Stock, Integer> re : res) {
             System.out.println(re.getKey().getStockName() + " -> 5000粉丝以上大V个数  " + re.getValue());
         }
-    }*/
+    }
 
     //最赚钱组合最新持仓以及收益走势、大盘走势
     @Test

@@ -1,0 +1,2817 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta property="qc:admins" content="10210420621156375">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <title>行情中心 - 雪球</title>
+    <script>var _write = document.write;
+    var write = function (str) {
+        SNB = window.SNB || {};
+        if (_write.apply) {
+            SNB.docWrite = function (str) {
+                _write.apply(document, arguments);
+            }
+        } else {
+            SNB.docWrite = _write;
+        }
+    };
+
+    document.write = write;
+    </script>
+    <meta name="keywords"
+          content="行情中心,股市行情,沪深300,沪深指数,沪深股市,沪深300指数,沪深股市行情,沪市大盘,沪市指数,沪市行情,沪市股市,沪市指数,深市股票,大盘,大盘指数,大盘走势,排行,排行榜,香港股市,港股,港股实时行情,基金,基金排名,基金净值,环球股指,美股,美股行情,美股走势,美股指数,新股,上会,发行,发审委,新股申购,新股上市,新股发行,新股在线,申购新股,新股认购,今日新股,中签,中签号,中签率,IPO,申购,上市定位,新股研究,创业板,中小板,比特币,国债期货,期货,债券,可转债,企债,国债,美元,人民币,货币基金,基金行情,回购,逆回购,正回购,shibor,信托,比特币行情,期货行情,外汇行情,雪球,投资,xueqiu">
+    <meta name="description"
+          content="雪球(xueqiu.com)行情中心为您提供最全面最准确的行情服务，涵盖沪深实时行情、港股行情、基金行情、美股行情、债券、回购、期货、比特币、信托、新股动态，同时整合沪深股市实时排行、投资提示、阶段统计、市场情绪等实用信息，帮助您了解每日市场异动。">
+    <!--<link rel="shortcut icon" href="http://xueqiu.com/favicon.ico">-->
+    <link rel="icon" type="image/png" href="https://assets.imedao.com/images/favicon.png">
+    <style>html {
+        display: none
+    }</style>
+    <script>if (self == top) {
+        document.documentElement.style.display = 'block';
+    } else if (top.location.host !== 'xueqiu.com') {
+        top.location = self.location;
+    }
+    var WATCH = {};
+    WATCH.appStart = 1566142875794
+    WATCH.pageStart = (new Date()).getTime()</script>
+    <link rel="stylesheet" href="https://assets.imedao.com/style/bootstrap-509d90.css">
+    <style>body {
+        padding-top: 40px;
+    }
+
+    /* TODO */
+    .search .dropdown-menu strong {
+        height: 12px;
+        line-height: 12px;
+    }</style>
+    <link rel="apple-touch-icon-precomposed" href="https://assets.imedao.com/images/icon-144.png">
+    <script src="https://assets.imedao.com/js/xdomain-0.6.15.js"></script>
+    <script>xdomain.slaves({
+        'https://xueqiu.com': '/proxy2.html',
+        'https://im0.xueqiu.com': '/proxy2.html',
+        'https://im1.xueqiu.com': '/proxy2.html',
+        'https://im2.xueqiu.com': '/proxy2.html',
+        'https://im3.xueqiu.com': '/proxy2.html',
+        'https://im4.xueqiu.com': '/proxy2.html',
+        'https://im5.xueqiu.com': '/proxy2.html',
+        'https://im6.xueqiu.com': '/proxy2.html',
+        'https://im7.xueqiu.com': '/proxy2.html',
+        'https://im8.xueqiu.com': '/proxy2.html',
+        'https://im9.xueqiu.com': '/proxy2.html'
+    });</script>
+    <script src="https://assets.imedao.com/js/SNB.lib.bundle-b11b47.js"></script>
+</head>
+<body id="jade-stockList_new" class="oppositeColor  isPC isNotMobile isNotPad">
+<script>SNB = window.SNB || {};
+jQuery.extend(SNB, {
+    data: {},
+    env: "production",
+    Views: {},
+    Templates: {},
+    Models: {},
+    Collections: {},
+    domain: {
+        "host": "http://xueqiu.com",
+        "base": "http://api.xueqiu.com",
+        "photo": "//xavatar.imedao.com",
+        "stock": "http://api.xueqiu.com",
+        "static": "//assets.imedao.com",
+        "v5stock": "https://stock.xueqiu.com",
+        "staticHttps": "https://assets.imedao.com",
+        "upyun": "http://xqimg.b0.upaiyun.com",
+        "pdf": "http://xqdoc.imedao.com",
+        "im": "http://api.xueqiu.com",
+        "shared": "/data/deploy/snowball-fe/logs/",
+        "file": "http://xqfile.imedao.com/"
+    },
+    currentUser: {
+        "subscribeable": false,
+        "remark": null,
+        "common_count": 0,
+        "recommend_reason": null,
+        "verified_infos": null,
+        "blocking": false,
+        "st_color": "1",
+        "domain": null,
+        "stock_status_count": null,
+        "recommend": null,
+        "intro": null,
+        "follow_me": false,
+        "verified": false,
+        "followers_count": 0,
+        "friends_count": 9,
+        "type": "1",
+        "location": null,
+        "description": null,
+        "id": 9797869620,
+        "status": 1,
+        "profile": "/9797869620",
+        "stocks_count": 0,
+        "screen_name": "HyphoonLee",
+        "step": "null",
+        "allow_all_stock": false,
+        "blog_description": null,
+        "city": null,
+        "donate_count": 0,
+        "gender": null,
+        "last_status_id": 0,
+        "status_count": 0,
+        "province": null,
+        "url": null,
+        "verified_description": null,
+        "verified_type": 0,
+        "following": false,
+        "name": null,
+        "name_pinyin": null,
+        "photo_domain": "//xavatar.imedao.com/",
+        "profile_image_url": "community/default/avatar.png!100x100.png",
+        "group_ids": null,
+        "screenname_pinyin": null,
+        "privacy_agreement": null,
+        "cube_count": 0,
+        "verified_realname": false,
+        "profile_image_url_small": "community/default/avatar.png!30x30.png",
+        "enableIM": false,
+        "bid": "a8977897580748c76954114c1e949ec5_jzgzlujr"
+    },
+    jsVersion: {
+        "05.jquery.cookie.js": "68e2a4",
+        "08.templates.js": "4aa7bf",
+        "SNB.TopicList.js": "30468a",
+        "SNB.UsersList.js": "cde97b",
+        "SNB.atDialog.js": "439f10",
+        "SNB.base.js": "2650f8",
+        "SNB.base_simple.js": "f52454",
+        "SNB.bind_telephone.js": "595c64",
+        "SNB.bind_verify.js": "1cec7d",
+        "SNB.calendar.js": "c65d9a",
+        "SNB.calendarDialog.js": "929cb0",
+        "SNB.calendarSubscribe.js": "e6012c",
+        "SNB.capitalReturnRateChart.js": "bd11c3",
+        "SNB.cardDialog.js": "ab3d1d",
+        "SNB.commentView.js": "c2f180",
+        "SNB.commonFriends.js": "5fedd6",
+        "SNB.companyInfo.js": "693d4b",
+        "SNB.dialog.js": "62ab29",
+        "SNB.dm.js": "3fd46e",
+        "SNB.dmDialog.js": "c96117",
+        "SNB.downloadDialog.js": "68595d",
+        "SNB.editor.emotion.js": "4f7739",
+        "SNB.editor.js": "e12e69",
+        "SNB.eventShare.js": "7b230c",
+        "SNB.financeTableDataInfo.js": "e83bf3",
+        "SNB.follower.js": "83577e",
+        "SNB.friends.js": "dc5568",
+        "SNB.g.bar.js": "8d17c0",
+        "SNB.guest.js": "2b5f68",
+        "SNB.guide.js": "bd0b84",
+        "SNB.helpers.js": "e8731e",
+        "SNB.his_home.js": "468d25",
+        "SNB.holdStockChart.js": "7fb688",
+        "SNB.home.js": "da999e",
+        "SNB.hotStock.js": "320cd1",
+        "SNB.im.contacts.js": "3d5779",
+        "SNB.im.dialog.js": "078b09",
+        "SNB.im.emotions.js": "158b2d",
+        "SNB.im.group_applys.js": "f354a0",
+        "SNB.im.group_joined.js": "3f1895",
+        "SNB.im.js": "a4d637",
+        "SNB.im.message.js": "426e6d",
+        "SNB.im.model.js": "a8324f",
+        "SNB.im.net.js": "ec4486",
+        "SNB.im.peer_chat.js": "cb13f1",
+        "SNB.im.session_item.js": "6fb32d",
+        "SNB.im.sessions_list.js": "eb2ad1",
+        "SNB.im.setting.js": "ac0ed0",
+        "SNB.im.stranger.js": "8ea9a5",
+        "SNB.im.utils.js": "ab3f84",
+        "SNB.imeigu_fund_topic.js": "a64418",
+        "SNB.imeigu_index.js": "d4f2e9",
+        "SNB.index.login.js": "783530",
+        "SNB.inner_trade.js": "5ffa31",
+        "SNB.interest.js": "dc0ab7",
+        "SNB.interview.js": "fa9ef6",
+        "SNB.kline.js": "7d13af",
+        "SNB.lib.bundle.js": "b11b47",
+        "SNB.lib.mobile.js": "8eda9f",
+        "SNB.modify_email.js": "0cb2c6",
+        "SNB.newChart.js": "7cea0e",
+        "SNB.newChart.mobile.js": "a3db95",
+        "SNB.newProfile.js": "6235e6",
+        "SNB.password.js": "8bf5ac",
+        "SNB.pdfDialog.js": "9f63e1",
+        "SNB.performance-year.js": "55e5b8",
+        "SNB.performance.js": "3add97",
+        "SNB.performanceChart.js": "0cc6bc",
+        "SNB.performanceView.js": "fde3d9",
+        "SNB.performance_mobile.js": "7f8dcf",
+        "SNB.personality.js": "3a3a3d",
+        "SNB.portfolio.js": "e866fc",
+        "SNB.portfolioNew.js": "cb243c",
+        "SNB.portfolioShareDialog.js": "de6849",
+        "SNB.profile_info.js": "1904cf",
+        "SNB.recommend.js": "344c23",
+        "SNB.renderTableTrHtml.js": "d9ecf0",
+        "SNB.renderUserView.js": "0ea1a6",
+        "SNB.reportSpam.js": "d42d33",
+        "SNB.repostDialog.js": "5afe3f",
+        "SNB.sameFriend.js": "d87ab3",
+        "SNB.search.js": "89b698",
+        "SNB.search_ipad.js": "62a216",
+        "SNB.search_stock_ipad.js": "6910d7",
+        "SNB.setting_user.js": "5a20e3",
+        "SNB.shareDialog.js": "1dee89",
+        "SNB.similarUsers.js": "0e8f2f",
+        "SNB.singleStock.js": "cdb94a",
+        "SNB.status-edit.js": "a9ae8a",
+        "SNB.status.js": "5441bb",
+        "SNB.status_mobile.js": "d0cd07",
+        "SNB.stockActiveUser.js": "e09e6c",
+        "SNB.stockFollowers.js": "ba7380",
+        "SNB.stockList.js": "21498c",
+        "SNB.stockList_new.js": "446595",
+        "SNB.stockNews.js": "55db59",
+        "SNB.stockRecommend.js": "a896cd",
+        "SNB.stockScreener.js": "d2c992",
+        "SNB.stockStatus.js": "939a20",
+        "SNB.talks.js": "1f4621",
+        "SNB.third_oauth.js": "936849",
+        "SNB.tipsTalk.js": "3bdde6",
+        "SNB.tipsTopic.js": "473f94",
+        "SNB.today.js": "d8d933",
+        "SNB.today.lib.js": "19681e",
+        "SNB.today_topic.js": "b47afc",
+        "SNB.tooltip.js": "5cf805",
+        "SNB.topInfluence.js": "89f31e",
+        "SNB.trans.js": "737e63",
+        "SNB.tweetDialog.js": "9eb539",
+        "SNB.typeahead.js": "33b08b",
+        "SNB.userRecommend.js": "95a052",
+        "SNB.userRemark.js": "001ff1",
+        "SNB.validator.js": "0d359f",
+        "SNB.weiboUser.js": "81e080",
+        "TGJSBridge.js": "4aaeff",
+        "WdatePicker.js": "eb9586",
+        "ajaxfileupload.js": "59627b",
+        "analytics.js": "b35281",
+        "article.conversation.js": "29d5a1",
+        "backbone.0.9.10.js": "5d519b",
+        "backbone.js": "d013f1",
+        "bootstrap.js": "6bd6fa",
+        "calendar.js": "9795e3",
+        "checkLogin.js": "38a9a1",
+        "config.js": "fb8df3",
+        "d3.v2.min.js": "1ef3b6",
+        "fingerprint2.js": "13634e",
+        "fittext.js": "45db6e",
+        "flexible-0.1.js": "f2528c",
+        "flexible.js": "a7abb0",
+        "flexpaper.js": "3c6a5d",
+        "flexpaper_handlers.js": "623c12",
+        "fullcalendar.js": "26781c",
+        "g.bar.js": "32785d",
+        "g.line-min.js": "2db247",
+        "g.pie.js": "46e2f1",
+        "g.raphael.js": "630b74",
+        "hammer.js": "ec2456",
+        "hc_exporting.js": "bb5d9e",
+        "hc_grid.js": "3b9851",
+        "highcharts.js": "122285",
+        "highlight.js": "21d2c6",
+        "iScroll.js": "834870",
+        "im2014.js": "a2072c",
+        "im_group_apply.js": "930e3b",
+        "imeigu_portfolioIframe.js": "e669a4",
+        "imgPlugin.js": "03434b",
+        "imgUpload.js": "e4b353",
+        "infinity.min.js": "0c5941",
+        "jquery.color.js": "875798",
+        "jquery.galleriffic.js": "e6186f",
+        "jquery.hammer.js": "e02a44",
+        "jquery.history.js": "6f8651",
+        "jquery.imgareaselect.js": "a9d059",
+        "jquery.imgareaselect.pack.js": "a31351",
+        "jquery.js": "d80a03",
+        "jquery.lazyload.min.js": "fb3951",
+        "jquery.mousewheel.js": "41ebd2",
+        "jquery.pjax.js": "7ccac8",
+        "jquery.plugin.pullToRefresh.js": "35465b",
+        "jquery.rotate.1-1.js": "60d180",
+        "jquery.simplePagination.js": "420bda",
+        "jquery.tagsinput.js": "b68784",
+        "jquery.ui.js": "9ee05e",
+        "jquery.uploadify.js": "aac61a",
+        "jquery.validate.js": "555531",
+        "jquery.vticker.js": "5104ed",
+        "jquery.watermark.js": "0cc691",
+        "login.js": "094d42",
+        "medium-editor.js": "b7780c",
+        "moment.js": "b01d4e",
+        "morris.min.js": "92098e",
+        "mustache.js": "fbf1b1",
+        "perfect-scrollbar-0.4.8.with-mousewheel.min.js": "1bd536",
+        "qrcode.min.js": "1dc069",
+        "raphael.js": "ea1c64",
+        "redirect-to-native.js": "1efe06",
+        "responsive_slides.min.js": "ea733a",
+        "sb-editor.js": "4a831d",
+        "sea.js": "1264a2",
+        "share-to-xueqiu.js": "ae4237",
+        "shenma_agt.js": "986160",
+        "single.js": "6dade5",
+        "slides.jquery.js": "cd66ff",
+        "step01.js": "b846e6",
+        "subscribe.js": "7d760a",
+        "underscore.js": "51b489",
+        "userSearch.js": "54d13d",
+        "xdomain-0.6.15.js": "575cd5",
+        "xdomain.js": "c4e376",
+        "xss.js": "ba11d2",
+        "zepto.js": "6cdcc6",
+        "SNB.lib.bundle/00.sea.js": "2749ae",
+        "SNB.lib.bundle/01.JSON.js": "b459a8",
+        "SNB.lib.bundle/02.modernizr.js": "f634b5",
+        "SNB.lib.bundle/03.jquery.js": "53538f",
+        "SNB.lib.bundle/04.jquery.ui.js": "96c17c",
+        "SNB.lib.bundle/05.jquery.cookie.js": "68e2a4",
+        "SNB.lib.bundle/06.underscore.js": "d97ed3",
+        "SNB.lib.bundle/07.backbone.js": "8a9a44",
+        "SNB.lib.bundle/08.templates.js": "4aa7bf",
+        "SNB.lib.bundle/10.jade.runtime.js": "1fc7ae",
+        "SNB.lib.mobile/1.zepto.min.js": "acaeac",
+        "SNB.lib.mobile/2.underscore.js": "c2da07",
+        "SNB.lib.mobile/iscroll.js": "4a55be",
+        "article/m.js": "c16d0d",
+        "bootstrap/bootstrap-alert.js": "a9f081",
+        "bootstrap/bootstrap-button.js": "ce03ae",
+        "bootstrap/bootstrap-carousel.js": "62b76a",
+        "bootstrap/bootstrap-collapse.js": "9be616",
+        "bootstrap/bootstrap-dropdown.js": "af96b6",
+        "bootstrap/bootstrap-modal.js": "cf302e",
+        "bootstrap/bootstrap-popover.js": "a4e6a7",
+        "bootstrap/bootstrap-scrollspy.js": "a88d39",
+        "bootstrap/bootstrap-tab.js": "8f2b45",
+        "bootstrap/bootstrap-tooltip.js": "682437",
+        "bootstrap/bootstrap-transition.js": "17fa23",
+        "bootstrap/bootstrap-typeahead.js": "97f107",
+        "common/SNB.helpers.js": "3115c8",
+        "common/backbone_1.1.2.js": "8531c9",
+        "common/clipboard.js": "a8956f",
+        "common/css3-mediaqueries.js": "f83d37",
+        "common/fastclick.js": "51d6b6",
+        "common/jquery-1.9.1.js": "b8b878",
+        "common/jquery-2.1.4.js": "394d23",
+        "common/jquery.countdown.js": "fe2cb6",
+        "common/jquery.waitforimages.js": "5cd25d",
+        "common/json.js": "b459a8",
+        "common/lib.js": "e9c317",
+        "common/moment_new.js": "606026",
+        "common/sea-2.3.0.js": "347c46",
+        "common/sea.js": "2749ae",
+        "common/underscore_1.6.0.js": "3ffba8",
+        "common/util.js": "1d5a72",
+        "common/zepto-core-fx.1.1.3.js": "27e274",
+        "common/zepto-deferred.js": "977158",
+        "cube/cube-analyze.js": "065ce2",
+        "cube/cube-rank-chart.js": "631f07",
+        "cube/cube-sell-notice.js": "4feee6",
+        "cube/cube-timeline.js": "c34b49",
+        "cube/cube_detail.js": "251e71",
+        "cube/cube_detail_m.js": "3a020d",
+        "cube/cube_discover.js": "988f2a",
+        "cube/cube_discover_m.js": "b9ea8b",
+        "cube/cube_edit.js": "13ff5f",
+        "cube/cube_guide.js": "a7e268",
+        "cube/cube_recommend.js": "7209e5",
+        "cube/post_grid.js": "730811",
+        "cube/profile_cubes.js": "c3312b",
+        "cube/range_slider.js": "358302",
+        "cube/stock_edit_modal.js": "ac4d7c",
+        "fund/auth-dialogue.js": "fb0432",
+        "fund/datepicker.js": "198353",
+        "fund/fund-bridge-old.js": "3cd74f",
+        "fund/fund-bridge.js": "571cdf",
+        "fund/fund-detail-mobile-event4.js": "fb0232",
+        "fund/fund-detail-mobile.js": "82f574",
+        "fund/fund-detail-new.js": "389b08",
+        "fund/fund-detail.js": "9735b0",
+        "fund/fund-dialog.js": "b6ce80",
+        "fund/fund-fast-click.js": "7eb4dd",
+        "fund/fund-home.js": "529a43",
+        "fund/fund-my-push.js": "2f0c40",
+        "fund/fund-my.js": "122498",
+        "fund/fund-notice.js": "b3a6e4",
+        "fund/fund-rank.js": "67fa2f",
+        "fund/fund-search.js": "2997e6",
+        "fund/fund-transaction.js": "e82935",
+        "fund/fund-util.js": "b8ba1f",
+        "fund/home-ugc.js": "b7b044",
+        "fund/profile-fund.js": "7416b3",
+        "highcharts/jquery-1.6.4.min.js": "526f75",
+        "im2014/base.adapter.deliver.js": "d5da9d",
+        "im2014/base.adapter.js": "e895d8",
+        "im2014/base.config.js": "7a4575",
+        "im2014/base.js": "58869d",
+        "im2014/base.localstorage.js": "57720d",
+        "im2014/base.net.js": "540257",
+        "im2014/base.utils.js": "d5c34d",
+        "im2014/db.contacts.js": "b92d01",
+        "im2014/db.groups.js": "aebe8f",
+        "im2014/db.js": "b1164d",
+        "im2014/db.message.helper.js": "62bc4a",
+        "im2014/db.messages.js": "00e053",
+        "im2014/db.sessions.js": "5289c7",
+        "im2014/im.js": "ac5608",
+        "im2014/session.dialog.js": "44671d",
+        "im2014/session.editor.js": "5b6178",
+        "im2014/session.gmm.js": "44c0a0",
+        "im2014/session.item.js": "2f722e",
+        "im2014/session.joingroup.js": "34f898",
+        "im2014/session.list.js": "bd3007",
+        "im2014/session.message.js": "30b56c",
+        "im2014/session.setting.js": "0cac30",
+        "im2014/widget.emotion.js": "389a95",
+        "im2014/widget.joingroup.js": "b2ee4c",
+        "im2014/widget.requestjoingroup.js": "319aaa",
+        "im2014/widget.search.js": "2d2eda",
+        "im2014/widget.uploader.js": "e1abec",
+        "im2014/widget.viewer.js": "93c152",
+        "imeigu/xueqiu_popup.js": "7589a8",
+        "lang/en.js": "c6550c",
+        "lang/zh-cn.js": "a606a6",
+        "lang/zh-tw.js": "4e0fdb",
+        "lib/areaChina.js": "311637",
+        "lib/autoresize.js": "f853a5",
+        "lib/axios.js": "c36985",
+        "lib/canvas-video-player.js": "d28388",
+        "lib/chai.js": "a0130d",
+        "lib/gt.js": "ff2566",
+        "lib/html2canvas.js": "8a2596",
+        "lib/jade.runtime.js": "7e2d74",
+        "lib/jquery.easing.1.3.js": "008f85",
+        "lib/jquery.fullPage.js": "f69025",
+        "lib/jquery.fullPage.new.js": "ddc0ef",
+        "lib/jquery.parallax.js": "e8b42b",
+        "lib/jquery.slides.min.js": "269b95",
+        "lib/mocha.js": "8799cd",
+        "lib/raven.min.js": "14f285",
+        "lib/scrollReveal.js": "8e7fd9",
+        "lib/shake.js": "57c8bc",
+        "lib/store.js": "9c7667",
+        "lib/swipe.js": "50667e",
+        "lib/swiper.animate1.0.2.min.js": "f54a7b",
+        "lib/swiper.js": "39e4cc",
+        "lib/swiper.min.js": "ecc734",
+        "lib/ueditor.js": "3bef0b",
+        "lib/upload.js": "f179e6",
+        "lib/vue.js": "2e1995",
+        "lib/vue.min.js": "2db52a",
+        "monthly/index.js": "38900b",
+        "pages/askstatement.js": "fe4d85",
+        "pages/check_active_status.js": "e632f0",
+        "pages/home.js": "b9a192",
+        "pages/single.js": "08d3a3",
+        "pages/utils.js": "976cdc",
+        "pages/welfare.js": "cfcc87",
+        "reward/index.js": "940772",
+        "reward/offer.js": "880e7e",
+        "reward/pay.js": "2713c0",
+        "reward/payAt.js": "7b9f35",
+        "reward/red-envelope.js": "e72eda",
+        "reward/reward_tooltip.js": "e776be",
+        "reward/square.js": "95ea6c",
+        "widget/TSNB.addfriend.js": "f04fd7",
+        "widget/TSNB.addpdf.js": "64a05d",
+        "widget/TSNB.addstock.js": "22f96a",
+        "widget/TSNB.at.js": "fdafde",
+        "widget/TSNB.bindverify.js": "f3ea69",
+        "widget/TSNB.home-editor.js": "8e634c",
+        "widget/TSNB.newuser-guide.js": "3bc710",
+        "widget/TSNB.people-autocomplete.js": "92ed61",
+        "widget/TSNB.performance.js": "ba812f",
+        "widget/TSNB.risk.js": "a573e7",
+        "widget/TSNB.sharestatus.js": "16e249",
+        "widget/TSNB.stockalert.js": "1cb0fd",
+        "widget/TSNB.stockgroup.js": "e16260",
+        "widget/TSNB.typeahead.js": "c66293",
+        "widget/aside.js": "c9126a",
+        "widget/backbone1.1.2.js": "181b4a",
+        "widget/bootstrap.js": "8a8204",
+        "widget/donate.js": "312591",
+        "widget/donate_tooltip.js": "435b5f",
+        "widget/editor.js": "152856",
+        "widget/emotions.js": "52fe3b",
+        "widget/favorite.js": "e356ee",
+        "widget/forward.js": "5a68fd",
+        "widget/global_pin.js": "b06ff9",
+        "widget/like.js": "50cdad",
+        "widget/lodash.underscore.js": "1854ff",
+        "widget/profile_pin.js": "a66176",
+        "widget/report_spam.js": "d6f864",
+        "widget/repost_comment.js": "b4b7c1",
+        "widget/share.js": "6e71c0",
+        "widget/status.js": "fdabf3",
+        "widget/underscore1.6.0.js": "4d7fd6",
+        "widget/util.js": "baee57",
+        "bootstrap/tests/phantom.js": "e38dfa",
+        "bootstrap/tests/server.js": "21e92a",
+        "common/lib/jquery-1.9.1.js": "3dd6ee",
+        "common/lib/jquery.mark.min.js": "0b6881",
+        "common/lib/jquery.validate.min.js": "ee1d57",
+        "common/lib/messages_zh.min.js": "88615c",
+        "common/lib/sea-2.3.0.js": "347c46",
+        "common/lib/swiper.jquery.min.js": "2c8a89",
+        "common/lib/underscore_1.6.0.js": "834fa8",
+        "common/lib/vue.js": "1f5701",
+        "common/util/analytics_post.js": "204b43",
+        "common/util/image.js": "5eb87c",
+        "common/util/jade.runtime.js": "aed6b5",
+        "common/util/jquery.extend.js": "6736b6",
+        "common/util/observer.js": "648151",
+        "common/util/openApp.js": "1b672e",
+        "common/util/password.js": "8a8947",
+        "common/util/upload.js": "8f1294",
+        "mobile-chart/mobile-chart_files/SNB.mobile_chart.js": "ff1366",
+        "mobile-chart/mobile-chart_files/hammer.js": "0c510a",
+        "mobile-chart/mobile-chart_files/sea.js": "1264a2",
+        "mobile-chart/mobile-chart_files/underscore.js": "51b489",
+        "mobile-chart/mobile-chart_files/zepto-core-fx.1.1.3.js": "27e274",
+        "pages/about/app.js": "a3c240",
+        "pages/about/app_mobile.js": "7db607",
+        "pages/broker/TSNB.analyze.js": "e00911",
+        "pages/broker/TSNB.bind.js": "0b4a15",
+        "pages/broker/TSNB.bridge.js": "472f64",
+        "pages/broker/TSNB.coupon-info.js": "aebc48",
+        "pages/broker/TSNB.coupon-list.js": "99d713",
+        "pages/broker/TSNB.coupon-rules.js": "48ff6a",
+        "pages/broker/TSNB.harass-report.js": "04a698",
+        "pages/broker/TSNB.ib-bind.js": "17b088",
+        "pages/broker/TSNB.lucky.js": "0b5638",
+        "pages/broker/TSNB.new-stock-detail.js": "847a6a",
+        "pages/broker/TSNB.new-stock.js": "c01799",
+        "pages/broker/TSNB.open-gift.js": "9fb5d9",
+        "pages/broker/TSNB.open-guide.js": "28e810",
+        "pages/broker/TSNB.open.js": "07b37a",
+        "pages/broker/TSNB.question-info.js": "eaf2ea",
+        "pages/broker/TSNB.question.js": "df6381",
+        "pages/cashier/cashier.js": "020e6d",
+        "pages/column/column.js": "6f4728",
+        "pages/column/setting.js": "d3a33a",
+        "pages/consultant/consultant-market.js": "6d9453",
+        "pages/cube/report-mobile.js": "7ca04c",
+        "pages/event/2015-summary.js": "ce321f",
+        "pages/event/TSNB.cube-summary-mobile.js": "d1e26c",
+        "pages/event/TSNB.cube-summary.js": "03609d",
+        "pages/event/TSNB.year-summary-mobile.js": "73f230",
+        "pages/event/TSNB.year-summary.js": "daff60",
+        "pages/event/ask-me-deeplink.js": "f14231",
+        "pages/event/cmc.js": "a7c273",
+        "pages/event/danjuan-club-xian.js": "61ed68",
+        "pages/event/danjuan-launch-2016.js": "5de903",
+        "pages/event/fof.js": "f3042a",
+        "pages/event/fund-bridge.js": "f212ba",
+        "pages/event/fund-event.js": "708f70",
+        "pages/event/simu-2017meeting.js": "b73819",
+        "pages/event/standard-chartered.js": "64fe3a",
+        "pages/event/summery2017.js": "bac390",
+        "pages/event/summery2018.js": "5398ef",
+        "pages/event/volvo-ad.js": "2ab2a9",
+        "pages/event/winning.js": "344ce3",
+        "pages/event/xueqiu-club-beijing.js": "deef9f",
+        "pages/event/xueqiu-club-hangzhou.js": "878b09",
+        "pages/event/xueqiu-club-nanjing.js": "15ef76",
+        "pages/event/xueqiu-club-suzhou.js": "429e29",
+        "pages/event/xueqiu-simu-shenzhen.js": "217baf",
+        "pages/festival/apply-ticket.js": "46ce46",
+        "pages/festival/apply.js": "ade131",
+        "pages/festival/apply_2.js": "b74823",
+        "pages/festival/buy-ticket.js": "00507f",
+        "pages/festival/buy.js": "60e170",
+        "pages/festival/live_polyv_chat.js": "b4fd37",
+        "pages/festival/liveplayer.js": "07d594",
+        "pages/festival/lucky.js": "72eb11",
+        "pages/festival/my-order.js": "908d98",
+        "pages/festival/outside-05.js": "dcbb71",
+        "pages/festival/pay-mobile.js": "07f637",
+        "pages/festival/pay-web-6.js": "0c3892",
+        "pages/festival/pay.js": "f76aef",
+        "pages/festival/validate.js": "1e5641",
+        "pages/fund/apply-fof.js": "9a96aa",
+        "pages/fund/callbacks-zepto.js": "1426db",
+        "pages/fund/deferred-zepto.js": "99c181",
+        "pages/fund/old_apply-fof.js": "8a1ca1",
+        "pages/fund/old_private-assets_1.js": "8aca12",
+        "pages/fund/old_private-choice.js": "e449a9",
+        "pages/fund/old_private-risk.js": "e9fd61",
+        "pages/fund/old_private-user.js": "ed5d56",
+        "pages/fund/old_subscribe-form.js": "990a69",
+        "pages/fund/private-fund-home.js": "c2393b",
+        "pages/fund/private-risk-revision.js": "038c4c",
+        "pages/fund/private-user-info.js": "683c90",
+        "pages/fund/subscribe-form.js": "0e8577",
+        "pages/fund/subscribe-list.js": "9009e1",
+        "pages/fund/subscribe-order.js": "58689f",
+        "pages/fund/subscribe-redemption.js": "ccbc5c",
+        "pages/fund/subscribe.js": "85a093",
+        "pages/home/live_list.js": "7b3567",
+        "pages/home/live_list_mobile.js": "ea4036",
+        "pages/home/timeline.js": "b75dd3",
+        "pages/invest/SNB.chart_base.js": "1efcdb",
+        "pages/invest/SNB.fund_chart.js": "ff9b86",
+        "pages/invest/SNB.mobile_chart.js": "ecd2c6",
+        "pages/invest/SNB.mobile_stock.js": "767936",
+        "pages/invest/SNB.profile_broker_rank.js": "85311d",
+        "pages/invest/SNB.rank.js": "028504",
+        "pages/invest/TSNB.pankou.js": "1353ba",
+        "pages/invest/TSNB.stocklist_fund.js": "e57f5f",
+        "pages/invest/chart.js": "3f086c",
+        "pages/pay/bonus-mobile.js": "37fc55",
+        "pages/pay/deposit-mobile.js": "799d95",
+        "pages/pay/deposit.js": "e37ac4",
+        "pages/pay/donate-mobile.js": "446419",
+        "pages/pay/mention-mobile.js": "c56ba0",
+        "pages/pay/offer-mobile.js": "821507",
+        "pages/pay/pin.js": "1804ea",
+        "pages/pay/reward-mobile.js": "a37e77",
+        "pages/pay/subscribe-mobile.js": "c6187b",
+        "pages/pay/withdraw.js": "952521",
+        "pages/profile/article.js": "c9a1a1",
+        "pages/prove/base.js": "b16e4c",
+        "pages/prove/cube-list.js": "60023e",
+        "pages/prove/cube.js": "5d88b0",
+        "pages/prove/user-mobile_9.js": "33432d",
+        "pages/prove/user-web.js": "8f5b73",
+        "pages/security/appeal.js": "1260c7",
+        "pages/security/index.js": "261973",
+        "pages/security/reset_pw.js": "c167a2",
+        "pages/sns/index.js": "6a3947",
+        "pages/sns/single.js": "4954e1",
+        "pages/special/TSNB.special-item.js": "d41d8c",
+        "pages/talks/single-mobile.js": "86b600",
+        "pages/today/mobile.index.js": "f72378",
+        "pages/user/atme_paid.js": "3a28e6",
+        "pages/user/forgot_pwd.js": "b4fce4",
+        "pages/user/login.js": "66498b",
+        "pages/user/profile.js": "41d21e",
+        "pages/user/recommend.js": "573f3e",
+        "pages/user/reg.js": "41f1de",
+        "pages/user/reset_pwd.js": "da1832",
+        "pages/user/setting_money.js": "6628b4",
+        "pages/user/uploadImage.js": "99c6d9",
+        "pages/user/verify-bindedPhoneNumber.js": "24faf8",
+        "pages/wallet/history.js": "18ae1c",
+        "widget/aside/TSNB.ad-danjuan.js": "a6aa6f",
+        "widget/aside/TSNB.ad.js": "cb229d",
+        "widget/aside/TSNB.cube-money.js": "f42186",
+        "widget/aside/TSNB.fund-rank.js": "719200",
+        "widget/aside/TSNB.hot-stocks.js": "44327c",
+        "widget/aside/TSNB.interesting-people.js": "832a1a",
+        "widget/aside/TSNB.other-services.js": "0563ac",
+        "widget/aside/TSNB.recommend-people.js": "73b8db",
+        "widget/aside/TSNB.sysnotify.js": "e50d01",
+        "widget/aside/TSNB.today-talk.js": "022aeb",
+        "widget/bootstrap/affix.js": "f014e8",
+        "widget/bootstrap/alert.js": "915f20",
+        "widget/bootstrap/bootstrap-datepicker.js": "daa8d6",
+        "widget/bootstrap/button.js": "3a8a2e",
+        "widget/bootstrap/carousel.js": "f763e0",
+        "widget/bootstrap/collapse.js": "c9ceab",
+        "widget/bootstrap/dropdown.js": "164604",
+        "widget/bootstrap/modal.js": "d390dd",
+        "widget/bootstrap/popover.js": "8c9993",
+        "widget/bootstrap/scrollspy.js": "37bd38",
+        "widget/bootstrap/tab.js": "5df6c4",
+        "widget/bootstrap/tooltip.js": "b973d7",
+        "widget/bootstrap/transition.js": "7af948",
+        "widget/bootstrap/typeahead.js": "f6b65a",
+        "widget/chart/c3.js": "8769cb",
+        "widget/chart/d3.js": "ef8166",
+        "widget/editor/at.js": "10a771",
+        "widget/editor/emotion.js": "da5ad7",
+        "widget/editor/umeditor.config.js": "ed3336",
+        "widget/editor/umeditor.js": "a65dc7",
+        "widget/editor/zh-cn.js": "16b3e4",
+        "widget/flexpaper/flexpaper.js": "3c6a5d",
+        "widget/flexpaper/flexpaper_handlers.js": "39b20d",
+        "widget/mobile/action.js": "43495d",
+        "widget/mobile/dm.js": "c45cf7",
+        "widget/mobile/form.js": "03c77e",
+        "widget/mobile/modal.js": "309f6a",
+        "widget/mobile/overlay.js": "44e1eb",
+        "widget/status/comment.js": "0c2046",
+        "widget/status/data.js": "6f5062",
+        "widget/status/pdf.js": "ee48be",
+        "widget/status/pin.js": "0d18e0",
+        "widget/tmp/SNB.base.js": "0f7ec0",
+        "widget/tmp/json.js": "b459a8",
+        "widget/util/TSNB.donate.js": "7fe197",
+        "widget/util/areas.js": "4708a6",
+        "widget/util/asksuccess.js": "fb6579",
+        "widget/util/modal.js": "682a45",
+        "widget/util/notice.js": "11616f",
+        "widget/util/regist-guide.js": "5d4834",
+        "widget/util/share.js": "8c017a",
+        "widget/util/tooltip.js": "fb5f4b",
+        "widget/util/typeahead.js": "80789d",
+        "widget/util/user.js": "cbd532",
+        "widget/util/webp.js": "84e846",
+        "bootstrap/tests/unit/bootstrap-alert.js": "93d6ac",
+        "bootstrap/tests/unit/bootstrap-button.js": "996b53",
+        "bootstrap/tests/unit/bootstrap-carousel.js": "54a2cf",
+        "bootstrap/tests/unit/bootstrap-collapse.js": "1b1262",
+        "bootstrap/tests/unit/bootstrap-dropdown.js": "6a491c",
+        "bootstrap/tests/unit/bootstrap-modal.js": "6dd5a0",
+        "bootstrap/tests/unit/bootstrap-phantom.js": "940ffb",
+        "bootstrap/tests/unit/bootstrap-popover.js": "4f65eb",
+        "bootstrap/tests/unit/bootstrap-scrollspy.js": "bd7b2c",
+        "bootstrap/tests/unit/bootstrap-tab.js": "63f9fc",
+        "bootstrap/tests/unit/bootstrap-tooltip.js": "fc2c1c",
+        "bootstrap/tests/unit/bootstrap-transition.js": "a1b2cc",
+        "bootstrap/tests/unit/bootstrap-typeahead.js": "2f86e0",
+        "bootstrap/tests/vendor/jquery.js": "fcf997",
+        "bootstrap/tests/vendor/qunit.js": "a8c0db",
+        "pages/broker/event/TSNB.contestrank.js": "3c98b6",
+        "pages/broker/event/TSNB.ebook.js": "55c001",
+        "pages/broker/event/TSNB.eight-gift.js": "1cbd82",
+        "pages/broker/event/TSNB.eleven.js": "4f71bc",
+        "pages/broker/event/TSNB.event-channel.js": "480398",
+        "pages/broker/event/TSNB.lagou.js": "84d891",
+        "pages/broker/event/TSNB.marginapplication.js": "4b858a",
+        "pages/broker/event/TSNB.pick-gift.js": "52d940",
+        "pages/broker/event/TSNB.pingan-update.js": "19b597",
+        "pages/broker/event/TSNB.pingan.js": "204c93",
+        "pages/broker/event/TSNB.realcontest.js": "0ba8a6",
+        "pages/broker/event/TSNB.realcontest2.js": "68575a",
+        "pages/broker/event/TSNB.realcontest3.js": "68575a",
+        "pages/broker/event/TSNB.realcontest4.js": "ca2775",
+        "pages/broker/event/TSNB.referee.js": "adc32f",
+        "pages/broker/event/TSNB.save.js": "2269c5",
+        "pages/broker/event/TSNB.savetraffic.js": "e9201a",
+        "pages/broker/event/TSNB.shakehistory.js": "eeb66d",
+        "pages/broker/event/TSNB.shakepk.js": "605486",
+        "pages/broker/event/TSNB.shakerank.js": "8c425a",
+        "pages/broker/event/TSNB.sport-gift.js": "485a56",
+        "pages/broker/invite/3d-falling-ribbons.js": "b224e2",
+        "pages/broker/invite/TSNB.invite-share-out.js": "bd94ec",
+        "pages/broker/invite/TSNB.invite-share.js": "9a38e5",
+        "pages/broker/invite/TSNB.invite.js": "11b8c6",
+        "pages/broker/invite/rotate3Di.js": "63702b",
+        "pages/broker/invite/rules.js": "c2664b",
+        "pages/broker/report/TSNB.base64.js": "dfaa20",
+        "pages/broker/report/TSNB.sp.js": "f03708",
+        "pages/broker/shake/TSNB.win-streak-rank.js": "50d411",
+        "pages/broker/share/TSNB.trade-share.js": "9987ca",
+        "pages/broker/template/TSNB.new-stock-list.js": "24e2aa",
+        "pages/event/ccsforum/apply-ticket.js": "b1f3b6",
+        "pages/event/ccsforum/buy.js": "cd4363",
+        "pages/event/fund-talk-chongqing-20180908/apply.js": "4146fd",
+        "pages/event/fund-talk-guangzhou-20180512/apply.js": "116085",
+        "pages/event/fund-talk-shanghai-20180414/apply.js": "07453c",
+        "pages/event/fund-talk-shenzhen-20180324/apply.js": "4d6b8c",
+        "pages/event/xueqiu-club-nanjing-20171028/apply.js": "c8ff45",
+        "pages/event/xueqiu-club-shenzhen-20170826/apply.js": "c22f06",
+        "pages/event/xueqiu-featival2017/apply-ticket.js": "89d2f8",
+        "pages/event/xueqiu-featival2017/apply.js": "77eca3",
+        "pages/event/xueqiu-featival2017/buy.js": "5dbb81",
+        "pages/event/xueqiu-featival2017/buy2.js": "09727d",
+        "pages/event/xueqiu-fundforum-20180422/apply.js": "5141c8",
+        "pages/event/xueqiu-fundforum-20180729/apply.js": "125a8b",
+        "pages/event/xueqiu-hksforum2018/apply-xy.js": "6996fb",
+        "pages/event/xueqiu-hksforum2018/apply.js": "e1e747",
+        "pages/event/xueqiu-hkusforum-20170924/apply.js": "1b67cd",
+        "pages/event/xueqiu-jianpingmetting-20181222/apply.js": "3e1405",
+        "pages/event/xueqiu-talk-hangzhou-20170923/apply.js": "ec5014",
+        "pages/invest/chart/TSNB.chart.base.js": "c3266b",
+        "pages/invest/chart/TSNB.chart.compare.js": "cf13d4",
+        "pages/invest/chart/TSNB.chart.event.js": "cc39ae",
+        "pages/invest/chart/TSNB.chart.kline.js": "49ca01",
+        "pages/invest/chart/TSNB.chart.networth.js": "1283f7",
+        "pages/invest/chart/TSNB.chart.status.js": "a60839",
+        "pages/invest/chart/TSNB.chart.stock.js": "6e305b",
+        "pages/invest/chart/TSNB.chart.thumbnail.js": "25a409",
+        "pages/invest/hq/TSNB.compare_ah.js": "16e828",
+        "pages/invest/portfolio/TSNB.create-portfolio-group.js": "30483b",
+        "pages/invest/portfolio/TSNB.delete-portfolio-group.js": "e6a16d",
+        "pages/invest/portfolio/TSNB.delete-portfolio.js": "21e14d",
+        "pages/invest/portfolio/TSNB.manage-portfolio-group.js": "6123ac",
+        "pages/invest/portfolio/TSNB.portfolio-util.js": "27b7af",
+        "pages/invest/portfolio/TSNB.portfolio.js": "9c6f80",
+        "pages/invest/portfolio/TSNB.stock-autocomplete.js": "cc5d2e",
+        "pages/sns/index/cube.js": "1f5d94",
+        "pages/sns/index/login.js": "2681eb",
+        "pages/sns/index/markets.js": "b51353",
+        "pages/sns/index/promotion.js": "aa01d3",
+        "pages/sns/index/stocks.js": "47fe9b"
+    },
+    cssVersion: {
+        "about.css": "8a68c7",
+        "activate_bar.css": "90db89",
+        "animate.css": "e53828",
+        "bootstrap-lite.css": "09b8f7",
+        "bootstrap.css": "509d90",
+        "bootstrap_full.css": "99108f",
+        "bootstrap_tab_xueqiu.css": "af8025",
+        "bootstrap_tab_xueqiu_white.css": "5492e5",
+        "button.css": "23513c",
+        "chart.css": "d41d8c",
+        "comment.css": "abf430",
+        "connect_link.css": "0edf0b",
+        "default.css": "2c7db6",
+        "default_mobile.css": "264592",
+        "dh.css": "a34780",
+        "dialog.css": "197e59",
+        "editor.css": "8e10be",
+        "editor_inline.css": "7d7563",
+        "flexpaper.css": "ecc108",
+        "form.css": "c845bd",
+        "fullcalendar.css": "b1f726",
+        "guide.css": "918f69",
+        "guide_overlay.css": "9dd1cf",
+        "hots-statuses.css": "181d4e",
+        "icon.css": "680a07",
+        "im.css": "aa2f71",
+        "im2014.css": "7185cd",
+        "imgroup.css": "5445f8",
+        "jinNang.css": "4bd30a",
+        "jinnang_1394597838763.css": "4bd30a",
+        "jquery.tagsinput.css": "3f47e0",
+        "jquery.ui.css": "279647",
+        "medium-editor.min.css": "dde48f",
+        "mentions_block.css": "4b58aa",
+        "mixin.css": "56732b",
+        "mixin_m.css": "8cdd93",
+        "mocha.css": "a5dea9",
+        "mystatus.css": "272433",
+        "newChart.css": "5d9be9",
+        "normalize.css": "709c92",
+        "payAt.css": "5429e2",
+        "pdfviewer.css": "720dd9",
+        "performance-year-mobile.css": "a17f1a",
+        "performance-year.css": "317994",
+        "performanceChart.css": "11689f",
+        "personality-ie8.css": "6a37b0",
+        "personality.css": "c723c4",
+        "pop_login.css": "8f20df",
+        "portfolioIframe.css": "c85adf",
+        "portfolioNew.css": "4f2887",
+        "profile.css": "0737fc",
+        "profile_info.css": "2bb9ad",
+        "profile_operations.css": "a0abbd",
+        "profile_status.css": "3969fd",
+        "pull-to-refresh.css": "3e5b69",
+        "qa.css": "529bcc",
+        "red-envelope.css": "766da0",
+        "reward.css": "14f3a2",
+        "searchBar.css": "aeef28",
+        "simplePagination.css": "b23401",
+        "snowbrick.css": "852420",
+        "square.css": "790e6a",
+        "status_mobile.css": "625b26",
+        "status_operate_btn.css": "0872af",
+        "swiper.min.css": "26d44f",
+        "tab-setting.css": "506d45",
+        "today_topic.css": "e4ea6a",
+        "tooltip.css": "820355",
+        "uploadify.css": "d5b49f",
+        "userRecommend.css": "beabbe",
+        "user_list.css": "bb06fd",
+        "variable.css": "d41d8c",
+        "widget.css": "88e99b",
+        "widget_user.css": "d1e0c0",
+        "article/m.css": "50ea8c",
+        "common/base.css": "5eaa54",
+        "common/form.css": "4839e9",
+        "common/grid.css": "c165dd",
+        "common/iconfont.css": "a87d2b",
+        "common/iconfont2.css": "7fdd8e",
+        "common/layout.css": "746a95",
+        "common/menu.css": "985468",
+        "common/mobile.css": "3362b1",
+        "common/mod.css": "c15889",
+        "common/modal.css": "62928d",
+        "common/nav-bar.css": "85c728",
+        "common/pager.css": "0d5b09",
+        "common/regist-guide.css": "2ecd55",
+        "common/reset.css": "e2dffc",
+        "common/var.css": "d41d8c",
+        "cube/cube-analyze.css": "3d43f3",
+        "cube/cube_card.css": "a56e9f",
+        "cube/cube_detail.css": "1669f7",
+        "cube/cube_detail_m.css": "6978cc",
+        "cube/cube_discover.css": "328573",
+        "cube/cube_discover_m.css": "32a394",
+        "cube/cube_edit.css": "f5208f",
+        "cube/cube_sell_notice_dialog.css": "913dc6",
+        "editor/index.css": "e5f2e2",
+        "editor/modal.css": "88f071",
+        "editor/normalize.css": "709c92",
+        "fund/datepicker.css": "405195",
+        "fund/fund_bottom.css": "df4833",
+        "fund/fund_detail.css": "e39a86",
+        "fund/fund_dialog-mobile-new.css": "ed9516",
+        "fund/fund_dialog-mobile.css": "6ace04",
+        "fund/fund_dialog.css": "dcee37",
+        "fund/fund_home.css": "21db35",
+        "fund/private-bottom.css": "959f45",
+        "fund/private-common.css": "34ce74",
+        "fund/private-home.css": "0b8c3a",
+        "fund/private-revision.css": "682b23",
+        "lib/animate.css": "8bea50",
+        "lib/animate.min.css": "b78a94",
+        "lib/jquery.fullPage.css": "3dfa38",
+        "lib/jquery.fullPage.new.css": "d4d4ba",
+        "lib/swiper.min.css": "9da938",
+        "pages/TSNB.about.css": "28449a",
+        "pages/home.css": "562d78",
+        "pages/imeigu.css": "cff846",
+        "pages/post.css": "79b509",
+        "pages/profile.css": "6dd49b",
+        "pages/status.css": "72d8cf",
+        "pages/tip.css": "9bc5a0",
+        "profiles/m.css": "a258eb",
+        "status/components_m.css": "738f36",
+        "status/offer.css": "553271",
+        "status/user.css": "678907",
+        "tactics/push.css": "ca2d74",
+        "touch/common.css": "1c57df",
+        "touch/normal.css": "d536b7",
+        "widget/TSNB.comment.css": "69052b",
+        "widget/TSNB.donate.css": "708f8a",
+        "widget/TSNB.donate_tooltip.css": "672acf",
+        "widget/TSNB.performance.css": "588cce",
+        "widget/TSNB.portfolio_dialog.css": "f7ca7d",
+        "widget/TSNB.portfolio_user_dialog.css": "9ad4f2",
+        "widget/TSNB.report_spam.css": "3e795c",
+        "widget/TSNB.share.css": "f36d77",
+        "widget/TSNB.status.css": "ed3e86",
+        "widget/TSNB.user_dialog.css": "81075a",
+        "widget/ask.css": "887dea",
+        "widget/btn.css": "9fdda0",
+        "widget/column_cell.css": "7c1170",
+        "widget/datepicker.css": "d683e7",
+        "widget/donate.css": "ed122a",
+        "widget/donate_tooltip.css": "9e0336",
+        "widget/global_pin.css": "92b1cf",
+        "widget/modal.css": "5fc4e9",
+        "widget/profile_pin.css": "60296d",
+        "common/css3/inline-block.css": "bb8c38",
+        "common/fonts/demo.css": "ad970f",
+        "common/fonts/iconfont.css": "ee79ab",
+        "pages/about/animation.css": "1e4355",
+        "pages/about/app.css": "2d075e",
+        "pages/about/app_mobile.css": "5b4c12",
+        "pages/about/share.css": "6712c8",
+        "pages/cashier/cashier.css": "32e0ca",
+        "pages/broker/analyze.css": "9cfaf8",
+        "pages/broker/bind-success.css": "e01f1a",
+        "pages/broker/coupon-info.css": "466999",
+        "pages/broker/coupon-list.css": "e30d83",
+        "pages/broker/dyzq-open.css": "e1a8a3",
+        "pages/broker/ft-transfer-guide-out.css": "aab76d",
+        "pages/broker/ft-transfer-guide.css": "aab76d",
+        "pages/broker/fzzq-open.css": "29f342",
+        "pages/broker/gfzq-open.css": "017efb",
+        "pages/broker/gjzq-open.css": "1e5c01",
+        "pages/broker/glzq-open.css": "5dcedc",
+        "pages/broker/harass-report.css": "c8f057",
+        "pages/broker/htzq-open.css": "3dc590",
+        "pages/broker/ib-bind.css": "00a9e5",
+        "pages/broker/insurance.css": "76f340",
+        "pages/broker/lucky-intro.css": "9f77d0",
+        "pages/broker/lucky-mobile.css": "15a951",
+        "pages/broker/lucky.css": "7e8ee4",
+        "pages/broker/mobile-base.css": "34ce7b",
+        "pages/broker/new-stock-detail.css": "fce293",
+        "pages/broker/new-stock.css": "b5356f",
+        "pages/broker/oops.css": "829ad0",
+        "pages/broker/open-gift-success.css": "efb534",
+        "pages/broker/open-gift.css": "2e20cb",
+        "pages/broker/open-guide.css": "a09f96",
+        "pages/broker/open.css": "952aa7",
+        "pages/broker/pingan-open-web.css": "56e767",
+        "pages/broker/pingan-open.css": "60b984",
+        "pages/broker/qa.css": "abe2ce",
+        "pages/broker/trade-question.css": "a16c67",
+        "pages/broker/zxzq-open.css": "817f57",
+        "pages/column/index.css": "2f4ba0",
+        "pages/column/kright.css": "f13d36",
+        "pages/column/setting.css": "804d87",
+        "pages/consultant/consultant.css": "3d1566",
+        "pages/cssforum/index.css": "5e6f92",
+        "pages/cssforum/xueqiu-cssforumn2018.css": "9ffe2a",
+        "pages/cube/report-mobile.css": "57b2b3",
+        "pages/event/2015-summary.css": "3fc58e",
+        "pages/event/TSNB.year-summary-mobile.css": "864fa2",
+        "pages/event/TSNB.year-summary.css": "a868f5",
+        "pages/event/assets-manage-mobile.css": "97f3d7",
+        "pages/event/assets-manage.css": "4e02c8",
+        "pages/event/choose-stock.css": "2e23a6",
+        "pages/event/cmc-mobile.css": "7fe9f7",
+        "pages/event/cmc.css": "8d1acc",
+        "pages/event/cube-summary-mobile.css": "bba03e",
+        "pages/event/cube-summary.css": "07f842",
+        "pages/event/danjuan-prize.css": "b665b6",
+        "pages/event/fof-mobile.css": "58e882",
+        "pages/event/fof-web.css": "607844",
+        "pages/event/fund-summary-2017.css": "019168",
+        "pages/event/standard-chartered.css": "7f9e93",
+        "pages/event/summary2017.css": "e4f77a",
+        "pages/event/summary2018.css": "9af9d7",
+        "pages/event/winning.css": "70c7a4",
+        "pages/event/xueqiu-citroen-c6-meeting-all.css": "c9df80",
+        "pages/event/xueqiu-citroen-c6-meeting.css": "d6952e",
+        "pages/event/xueqiu-club-mobile.css": "3c7ee2",
+        "pages/event/xueqiu-club-xiamen-pc.css": "e4c98a",
+        "pages/event/xueqiu-club-xiamen.css": "7cb432",
+        "pages/event/xueqiu-club.css": "e8654f",
+        "pages/event/xueqiu-fund-plan.css": "327dd8",
+        "pages/festival/buy.css": "dea46d",
+        "pages/festival/festival.css": "f397fa",
+        "pages/festival/finances.css": "bd13bd",
+        "pages/festival/fundforum2017.css": "0f9f22",
+        "pages/festival/index.css": "990d70",
+        "pages/festival/lucky.css": "326773",
+        "pages/fund/apply-fof.css": "71f608",
+        "pages/fund/apply-success.css": "122969",
+        "pages/fund/private-info.css": "b7c5bf",
+        "pages/fund/private-risk.css": "cd78b1",
+        "pages/fund/subscribe-form.css": "d92852",
+        "pages/fund/subscribe-success.css": "d41d8c",
+        "pages/hksforum/flexslider.css": "c4f122",
+        "pages/hksforum/index.css": "1ba040",
+        "pages/home/home-editor.css": "b7e926",
+        "pages/home/newuser-guide.css": "23dd61",
+        "pages/home/widgets.css": "c89e4c",
+        "pages/index/cube.css": "041e70",
+        "pages/index/default.css": "ca56f9",
+        "pages/invest/dealList.css": "79d551",
+        "pages/invest/mobile_chart.css": "5e058b",
+        "pages/invest/mobile_performance.css": "16e7bb",
+        "pages/invest/mobile_stock.css": "7e6b64",
+        "pages/invest/profile_broker_rank.css": "55a18e",
+        "pages/invest/rank.css": "4d6196",
+        "pages/invest/singleStock.css": "5049bf",
+        "pages/invest/stock_alert.css": "d1c62a",
+        "pages/invest/stock_alert_list.css": "e75274",
+        "pages/invest/stock_chart.css": "b9b8f1",
+        "pages/invest/stocklist.css": "452eb5",
+        "pages/invest/stocklist_fund.css": "74824d",
+        "pages/mobile/common.css": "004801",
+        "pages/mobile/vars.css": "d41d8c",
+        "pages/monthly/monthly.css": "e854d8",
+        "pages/pay/reward-mobile.css": "eba388",
+        "pages/pay/subscribe-mobile.css": "128827",
+        "pages/pay/wallet-mobile.css": "583bc0",
+        "pages/pay/wallet.css": "51833b",
+        "pages/pin/pin-mobile.css": "bf2ba8",
+        "pages/preipo/preipo.css": "dad348",
+        "pages/prove/cube-list.css": "c98458",
+        "pages/prove/cube-state.css": "082735",
+        "pages/prove/cube.css": "3b2a33",
+        "pages/prove/list.css": "12a10b",
+        "pages/prove/mobile.css": "4db118",
+        "pages/prove/photo.css": "9af94e",
+        "pages/prove/user-state.css": "98c676",
+        "pages/prove/user.css": "8614db",
+        "pages/security/index.css": "24d2fb",
+        "pages/security/index_web.css": "e6ac93",
+        "pages/singlePage/download.css": "4ab7c5",
+        "pages/singlePage/livelist.css": "780686",
+        "pages/singlePage/single.css": "9432c6",
+        "pages/singlePage/update.css": "f573e0",
+        "pages/sns/TSNB.single.css": "48ef79",
+        "pages/sns/home.css": "cb7cd7",
+        "pages/special/TSNB.special-item.css": "cd6af4",
+        "pages/special/app-3rd-guide.css": "809b8e",
+        "pages/stock/info.css": "924c83",
+        "pages/stock/option-import.css": "337dcc",
+        "pages/talks/single-mobile.css": "90c5f6",
+        "pages/today/index-mobile.css": "a95cc9",
+        "pages/user/atmePaid.css": "029153",
+        "pages/user/binded-phonenumber.css": "a3d8b5",
+        "pages/user/forgot_pwd.css": "fc1bfd",
+        "pages/user/login.css": "2db9c8",
+        "pages/user/profile.css": "b6d3b5",
+        "pages/user/recommend.css": "7464e2",
+        "pages/user/reg.css": "0722f2",
+        "pages/wallet/welfare.css": "d92df3",
+        "widget/bootstrap/alerts.css": "2c520b",
+        "widget/bootstrap/badges.css": "da050d",
+        "widget/bootstrap/bootstrap.css": "971848",
+        "widget/bootstrap/breadcrumbs.css": "b9ab35",
+        "widget/bootstrap/button-groups.css": "a7c65b",
+        "widget/bootstrap/buttons.css": "a73cc0",
+        "widget/bootstrap/carousel.css": "93e128",
+        "widget/bootstrap/close.css": "30812b",
+        "widget/bootstrap/code.css": "fab06a",
+        "widget/bootstrap/component-animations.css": "63295e",
+        "widget/bootstrap/dropdowns.css": "d91661",
+        "widget/bootstrap/forms.css": "1dac09",
+        "widget/bootstrap/glyphicons.css": "024db0",
+        "widget/bootstrap/grid.css": "7f9bd0",
+        "widget/bootstrap/input-groups.css": "fc56c7",
+        "widget/bootstrap/jumbotron.css": "cf17ad",
+        "widget/bootstrap/labels.css": "3e0971",
+        "widget/bootstrap/list-group.css": "ec9751",
+        "widget/bootstrap/media.css": "ecbd91",
+        "widget/bootstrap/mixins.css": "a0cb66",
+        "widget/bootstrap/modals.css": "5b2682",
+        "widget/bootstrap/navbar.css": "abacbf",
+        "widget/bootstrap/navs.css": "9fbe5c",
+        "widget/bootstrap/normalize.css": "ddcb0b",
+        "widget/bootstrap/pager.css": "7be0a4",
+        "widget/bootstrap/pagination.css": "eaa566",
+        "widget/bootstrap/panels.css": "d53a2d",
+        "widget/bootstrap/popovers.css": "93bafa",
+        "widget/bootstrap/print.css": "b11602",
+        "widget/bootstrap/progress-bars.css": "580cf9",
+        "widget/bootstrap/responsive-embed.css": "1c5626",
+        "widget/bootstrap/responsive-utilities.css": "2db01f",
+        "widget/bootstrap/scaffolding.css": "0fc3a2",
+        "widget/bootstrap/tables.css": "462165",
+        "widget/bootstrap/theme.css": "52929d",
+        "widget/bootstrap/thumbnails.css": "b96eb4",
+        "widget/bootstrap/tooltip.css": "c060af",
+        "widget/bootstrap/type.css": "c8dff8",
+        "widget/bootstrap/utilities.css": "d3b1aa",
+        "widget/bootstrap/variables.css": "d41d8c",
+        "widget/bootstrap/wells.css": "578e1c",
+        "widget/c3/c3.css": "f105cd",
+        "widget/mobile/modal.css": "f2f776",
+        "widget/mobile/normal.css": "d536b7",
+        "widget/mobile/top-bar.css": "f4eb52",
+        "widget/umeditor/editor.css": "056c61",
+        "widget/umeditor/umeditor.css": "7eb569",
+        "widget/util/page.css": "3ea87c",
+        "pages/broker/event/animate.css": "15fd54",
+        "pages/broker/event/contestrank.css": "43e9ad",
+        "pages/broker/event/ebook.css": "9cf811",
+        "pages/broker/event/eight-gift.css": "4670ba",
+        "pages/broker/event/eleven-success.css": "6b6177",
+        "pages/broker/event/eleven.css": "3d7c5b",
+        "pages/broker/event/event-channel.css": "e50c2a",
+        "pages/broker/event/lagou.css": "0cc566",
+        "pages/broker/event/marginapplication.css": "e6481c",
+        "pages/broker/event/pingan-success.css": "c27eca",
+        "pages/broker/event/pingan-update.css": "7630f5",
+        "pages/broker/event/realcontest.css": "eaebf6",
+        "pages/broker/event/realcontest2.css": "7062a5",
+        "pages/broker/event/realcontest3.css": "dfa2f8",
+        "pages/broker/event/realcontest4.css": "42dc9f",
+        "pages/broker/event/referee.css": "8d088f",
+        "pages/broker/event/save.css": "3b9754",
+        "pages/broker/event/savetraffic.css": "067c23",
+        "pages/broker/event/shakehistory.css": "abf144",
+        "pages/broker/event/shakepk.css": "d45933",
+        "pages/broker/event/shakerank.css": "936224",
+        "pages/broker/event/sport-gift.css": "8c864c",
+        "pages/broker/invite/invite-moutai.css": "ab8b5b",
+        "pages/broker/invite/invite.css": "cc5096",
+        "pages/broker/report/sp.css": "7db848",
+        "pages/broker/shake/win-streak-rank.css": "936224",
+        "pages/broker/share/trade-share.css": "543eb6",
+        "pages/broker/widget/share.css": "1eb946",
+        "pages/event/xueqiu-club-shanghai-20170820/index.css": "ea998f",
+        "pages/event/xueqiu-fundforum-20180422/index.css": "1cca39",
+        "pages/event/xueqiu-fundforum-20180729/index.css": "99174f",
+        "pages/event/xueqiu-jianpingmetting-20181222/index.css": "30fa15",
+        "pages/home/widgets/ad.css": "4f1e5e",
+        "pages/home/widgets/hot-stocks.css": "24743d",
+        "pages/home/widgets/interesting-recommend.css": "25f080",
+        "pages/home/widgets/my-nav.css": "908fdf",
+        "pages/home/widgets/other-services.css": "1dc5b3",
+        "pages/home/widgets/sysnotify.css": "116c48",
+        "pages/invest/portfolio/group.css": "3e96d2",
+        "pages/invest/portfolio/portfolio.css": "e5c895",
+        "pages/market/event/channel.css": "6db4a8",
+        "pages/market/event/channel2.css": "78b35c",
+        "widget/bootstrap/mixins/alerts.css": "d41d8c",
+        "widget/bootstrap/mixins/background-variant.css": "d41d8c",
+        "widget/bootstrap/mixins/border-radius.css": "d41d8c",
+        "widget/bootstrap/mixins/buttons.css": "d41d8c",
+        "widget/bootstrap/mixins/center-block.css": "d41d8c",
+        "widget/bootstrap/mixins/clearfix.css": "d41d8c",
+        "widget/bootstrap/mixins/forms.css": "d41d8c",
+        "widget/bootstrap/mixins/gradients.css": "d41d8c",
+        "widget/bootstrap/mixins/grid-framework.css": "d41d8c",
+        "widget/bootstrap/mixins/grid.css": "2f25b9",
+        "widget/bootstrap/mixins/hide-text.css": "d41d8c",
+        "widget/bootstrap/mixins/image.css": "d41d8c",
+        "widget/bootstrap/mixins/labels.css": "d41d8c",
+        "widget/bootstrap/mixins/list-group.css": "d41d8c",
+        "widget/bootstrap/mixins/nav-divider.css": "d41d8c",
+        "widget/bootstrap/mixins/nav-vertical-align.css": "d41d8c",
+        "widget/bootstrap/mixins/opacity.css": "d41d8c",
+        "widget/bootstrap/mixins/pagination.css": "d41d8c",
+        "widget/bootstrap/mixins/panels.css": "d41d8c",
+        "widget/bootstrap/mixins/progress-bar.css": "d41d8c",
+        "widget/bootstrap/mixins/reset-filter.css": "d41d8c",
+        "widget/bootstrap/mixins/resize.css": "d41d8c",
+        "widget/bootstrap/mixins/responsive-visibility.css": "d41d8c",
+        "widget/bootstrap/mixins/size.css": "d41d8c",
+        "widget/bootstrap/mixins/tab-focus.css": "d41d8c",
+        "widget/bootstrap/mixins/table-row.css": "d41d8c",
+        "widget/bootstrap/mixins/text-emphasis.css": "d41d8c",
+        "widget/bootstrap/mixins/text-overflow.css": "d41d8c",
+        "widget/bootstrap/mixins/vendor-prefixes.css": "d41d8c"
+    },
+    staticDomain: 'https://assets.imedao.com',
+    bid: 'a8977897580748c76954114c1e949ec5_jzgzlujr'
+});
+
+SNB.data.access_token = $.cookie("xq_a_token") || "17067303557fc0af0961063ffb2aa2341c3132a4";
+</script><!-- 防止局域网缓存用户信息-->
+<script>(function () {
+    var search = window.location.search || '';
+    if (search.indexOf('_=') === -1 && SNB.bid !== '' && document.cookie && document.cookie.indexOf('bid=' + SNB.bid) === -1) {
+        var searchArr = search.split('&');
+        searchArr.push('_=' + (+new Date).toString(36));
+        window.location.search = search.join('&');
+    }
+})();
+</script>
+<script src="https://assets.imedao.com/js/05.jquery.cookie.js"></script>
+<script>function delCookie(name) {//为了删除指定名称的cookie，可以将其过期时间设定为一个过去的时间
+    var date = new Date();
+    date.setTime(date.getTime() - 10000);
+    document.cookie = name + '=a; expires=' + date.toGMTString();
+}
+
+/*
+if(!$.cookie('xq_refresh') && $.cookie('xq_a_token')){
+  $.ajax({
+    url: '/user/refreshCookie',
+    async: false
+  }).done(function(){
+    delCookie('xq_a_token');
+    delCookie('xq_r_token');
+    delCookie('xq_token_expire');
+  });
+}
+*/
+jQuery(function ($) {
+    $('.navbar a.exit').on('click', function () {
+        try {
+            delCookie('xq_a_token');
+            delCookie('xq_r_token');
+            delCookie('xq_token_expire');
+        } catch (e) {
+            console.log(e);
+        }
+    });
+});</script>
+<script src="https://assets.imedao.com/js/SNB.helpers-e8731e.js"></script>
+<script>SNB.profileUser = SNB.currentUser</script>
+<noscript>
+    <style>html {
+        display: block
+    }</style>
+    <p class="ie6">当前浏览器禁用了JavaScript，导致不能正常使用雪球的功能，请打开JavaScript后再访问本站。</p></noscript>
+<!--[if lt IE 8]>
+<div class="ie6">你正在使用的浏览器版本过低（IE7或IE7以下，包括套用了IE内核的360浏览器、搜狗浏览器等）。<br/>如果不能正常浏览本站或某些功能无法使用，请到微软官网下载升级 <a
+        href="http://windows.microsoft.com/zh-CN/internet-explorer/downloads/ie">Internet Explorer</a> 或使用 <a
+        href="http://www.google.com/chrome/">谷歌 Google Chrome</a> 浏览器。
+</div><![endif]-->
+<div class="temp"></div>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container"><h1 id="logo"><a href="/" title="返回我的首页"><img
+                src="https://assets.imedao.com/images/logos/logo.2015.png" alt="雪球" class="logo-type"><img
+                src="https://assets.imedao.com/images/logos/logotype.2015.png" alt="雪球" style="width: 48px;"></a></h1>
+            <div class="nav_logined">
+                <ul class="nav">
+                    <li class=""><a href="/">首页</a></li>
+                    <li class="dropdown hots"><a href="/today" data-toggle="dropdown" data-target="#"
+                                                 class="dropdown-toggle">精华<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class=""><a href="/today">今日话题</a></li><!--mixin nav-item("","/today/hots","热门讨论")-->
+                            <li class=""><a href="/talks/all">雪球访谈</a></li>
+                            <li class=""><a href="/people">找人</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown hq"><a href="/hq" data-toggle="dropdown" data-target="#"
+                                               class="dropdown-toggle">行情<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class=""><a href="/hq">行情中心</a></li>
+                            <li class=""><a href="/p/discover">买什么</a></li>
+                            <li class=""><a href="/hq/screener">筛选器</a></li>
+                            <li class="_blank"><a href="/f/home">私募中心</a></li>
+                            <li class=""><a href="/hq#xgss">新股上市</a></li>
+                        </ul>
+                    <li><a href="/ask/square" target="_self" class="new">问答</a></li>
+                    </li></ul>
+                <div class="search">
+                    <form method="get" action="/k"><input id="quick-search" name="q" type="text" autocomplete="off"
+                                                          placeholder="搜索 股票/讨论/用户/组合/群组" class="typeahead"></form>
+                    <span class="icon"><i></i></span></div>
+                <ul class="nav pull-right account">
+                    <li class="dropdown"><a href="#" data-toggle="dropdown" data-target="#" class="dropdown-toggle">HyphoonLee<b
+                            class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="nav-account-profile"><a href="/9797869620/profile"><img
+                                    src="//xavatar.imedao.com/community/default/avatar.png!100x100.png" width="30px"
+                                    height="30px">HyphoonLee</a></li>
+                            <li class=""><a href="/setting/user">个人设置</a></li>
+                            <li class=""><a href="/setting/st_privacy">股票设置</a></li>
+                            <li><a href="/user/logout" class="exit">退出</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a id="btn-notice" href="#" data-toggle="dropdown" data-target="#"
+                                            class="dropdown-toggle">消息<sup>0</sup><b class="caret"></b></a>
+                        <ul class="notices-list dropdown-menu">
+                            <li class="comments"><a href="/comments" class="pjax"><span class="count"></span>收到的评论</a>
+                            </li>
+                            <li class="dm"><a href="/messages"><span class="count"></span>新私信</a></li>
+                            <li class="likes"><a href="/likes" class="pjax"><span class="count"></span>赞我的</a></li>
+                            <li class="mentions"><a href="/atme" class="pjax"><span class="count"></span>@我的</a></li>
+                            <li class="paid_mentions"><a href="/atme-paid" class="pjax"><span class="count"></span>原文提问我的</a>
+                            </li>
+                            <li class="pm_comments"><a href="/atme-paid?mention=comment" class="pjax"><span
+                                    class="count"></span>评论提问我的</a></li>
+                            <li class="followers"><a href="/follows"><span class="count"></span>新增粉丝</a></li>
+                            <li class="notices"><a href="#" class="pjax"><span class="count"></span>新公告</a></li>
+                            <li class="events"><a href="/calendar" class="pjax"><span class="count"></span>事件提醒</a></li>
+                            <li class="setting"><a href="/setting/notice">提醒设置</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div><!--!=css('im.css')-->
+<script>seajs.config({
+    timeout: 60000,
+    preload: [SNB.jsVersion && _.keys(SNB.jsVersion).length ? 'SNB.base-' + SNB.jsVersion['SNB.base.js'] + '.js' : 'SNB.base.js']
+})
+</script>
+<script>;(function () {
+    var keys = _.keys(SNB.jsVersion)
+        , map = [];
+
+    if (keys.length) {
+        _.each(keys, function (k) {
+            var reg = new RegExp('\\/(' + k.replace(/\./g, '\\.') + ')(\\?.*|$)');
+
+            map.push([reg, function (all, fileName, param) {
+                var result = '/' + fileName.replace(/\.js$/i, '') + '-' + SNB.jsVersion[k] + '.js';
+
+                if (param) {
+                    result += param;
+                }
+
+                return result;
+            }]);
+        });
+
+        seajs.config({
+            map: map
+        });
+    }
+}())
+</script><!-- test config-->
+<script src="https://assets.imedao.com/js/bootstrap-6bd6fa.js"></script>
+<div id="center" class="container">
+    <div class="main">
+        <div style="display:none" class="loading"></div>
+        <div class="wrapper">
+            <link rel="stylesheet" href="https://assets.imedao.com/style/pages/invest/stocklist-452eb5.css">
+            <div class="stocklist-wrapper">
+                <div class="industry-nav">
+                    <div class="nav-container fold recentView">
+                        <div class="first-nav nav0"><i></i><span class="name">最近访问</span></div>
+                        <ul class="second-nav">
+                            <li>暂无访问</i></li>
+                        </ul>
+                    </div>
+                    <div class="nav-container fold">
+                        <div class="first-nav nav1"><i></i><span class="name">沪深股市</span></div>
+                        <ul class="second-nav">
+                            <li><i class="list-style"></i><a href="#exchange=CN&firstName=1&secondName=1_0"
+                                                             title="沪深一览">沪深一览</a></li>
+                            <li><i class="list-style"></i><a href="#exchange=CN&type=kcb&firstName=科创板"
+                                                             title="科创板">科创板</a></li>
+                            <li><i class="list-style"></i>基础分类<i class="expand"></i><span class="fold">  </span>
+                                <div class="third-nav">
+                                    <ul>
+                                        <li><span class="initial">B</span><a
+                                                href="#exchange=CN&plate=1_2_23&firstName=1&secondName=1_2&level2code=S2701"
+                                                title=半导体 data-type="undefined" data-level2code="S2701">半导体</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_32&firstName=1&secondName=1_2&level2code=S3301"
+                                                title=白色家电 data-type="undefined" data-level2code="S3301">白色家电</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_39&firstName=1&secondName=1_2&level2code=S3602"
+                                                title=包装印刷 data-type="undefined" data-level2code="S3602">包装印刷</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_73&firstName=1&secondName=1_2&level2code=S4902"
+                                                title=保险 data-type="undefined" data-level2code="S4902">保险</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_77&firstName=1&secondName=1_2&level2code=S6102"
+                                                title=玻璃制造 data-type="undefined" data-level2code="S6102">玻璃制造</a></li>
+                                        <li><span class="initial">C</span><a
+                                                href="#exchange=CN&plate=1_2_6&firstName=1&secondName=1_2&level2code=S1107"
+                                                title=畜禽养殖 data-type="undefined" data-level2code="S1107">畜禽养殖</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_11&firstName=1&secondName=1_2&level2code=S2104"
+                                                title=采掘服务 data-type="undefined" data-level2code="S2104">采掘服务</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_69&firstName=1&secondName=1_2&level2code=S4604"
+                                                title=餐饮 data-type="undefined" data-level2code="S4604">餐饮</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_96&firstName=1&secondName=1_2&level2code=S6504"
+                                                title=船舶制造 data-type="undefined" data-level2code="S6504">船舶制造</a></li>
+                                        <li><span class="initial">D</span><a
+                                                href="#exchange=CN&plate=1_2_7&firstName=1&secondName=1_2&level2code=S1108"
+                                                title=动物保健 data-type="undefined" data-level2code="S1108">动物保健</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_27&firstName=1&secondName=1_2&level2code=S2705"
+                                                title=电子制造 data-type="undefined" data-level2code="S2705">电子制造</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_48&firstName=1&secondName=1_2&level2code=S4101"
+                                                title=电力 data-type="undefined" data-level2code="S4101">电力</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_74&firstName=1&secondName=1_2&level2code=S4903"
+                                                title=多元金融 data-type="undefined" data-level2code="S4903">多元金融</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_84&firstName=1&secondName=1_2&level2code=S6301"
+                                                title=电机 data-type="undefined" data-level2code="S6301">电机</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_85&firstName=1&secondName=1_2&level2code=S6302"
+                                                title=电气自动化设备 data-type="undefined" data-level2code="S6302">电气自动化设备</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_86&firstName=1&secondName=1_2&level2code=S6303"
+                                                title=电源设备 data-type="undefined" data-level2code="S6303">电源设备</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_95&firstName=1&secondName=1_2&level2code=S6503"
+                                                title=地面兵装 data-type="undefined" data-level2code="S6503">地面兵装</a></li>
+                                        <li><span class="initial">F</span><a
+                                                href="#exchange=CN&plate=1_2_36&firstName=1&secondName=1_2&level2code=S3501"
+                                                title=纺织制造 data-type="undefined" data-level2code="S3501">纺织制造</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_37&firstName=1&secondName=1_2&level2code=S3502"
+                                                title=服装家纺 data-type="undefined" data-level2code="S3502">服装家纺</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_60&firstName=1&secondName=1_2&level2code=S4301"
+                                                title=房地产开发 data-type="undefined" data-level2code="S4301">房地产开发</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_79&firstName=1&secondName=1_2&level2code=S6201"
+                                                title=房屋建设 data-type="undefined" data-level2code="S6201">房屋建设</a></li>
+                                        <li><span class="initial">G</span><a
+                                                href="#exchange=CN&plate=1_2_18&firstName=1&secondName=1_2&level2code=S2301"
+                                                title=钢铁 data-type="undefined" data-level2code="S2301">钢铁</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_20&firstName=1&secondName=1_2&level2code=S2403"
+                                                title=工业金属 data-type="undefined" data-level2code="S2403">工业金属</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_25&firstName=1&secondName=1_2&level2code=S2703"
+                                                title=光学光电子 data-type="undefined" data-level2code="S2703">光学光电子</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_52&firstName=1&secondName=1_2&level2code=S4201"
+                                                title=港口 data-type="undefined" data-level2code="S4201">港口</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_53&firstName=1&secondName=1_2&level2code=S4202"
+                                                title=高速公路 data-type="undefined" data-level2code="S4202">高速公路</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_54&firstName=1&secondName=1_2&level2code=S4203"
+                                                title=公交 data-type="undefined" data-level2code="S4203">公交</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_87&firstName=1&secondName=1_2&level2code=S6304"
+                                                title=高低压设备 data-type="undefined" data-level2code="S6304">高低压设备</a></li>
+                                        <li><span class="initial">H</span><a
+                                                href="#exchange=CN&plate=1_2_13&firstName=1&secondName=1_2&level2code=S2202"
+                                                title=化学原料 data-type="undefined" data-level2code="S2202">化学原料</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_14&firstName=1&secondName=1_2&level2code=S2203"
+                                                title=化学制品 data-type="undefined" data-level2code="S2203">化学制品</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_15&firstName=1&secondName=1_2&level2code=S2204"
+                                                title=化学纤维 data-type="undefined" data-level2code="S2204">化学纤维</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_21&firstName=1&secondName=1_2&level2code=S2404"
+                                                title=黄金 data-type="undefined" data-level2code="S2404">黄金</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_42&firstName=1&secondName=1_2&level2code=S3701"
+                                                title=化学制药 data-type="undefined" data-level2code="S3701">化学制药</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_51&firstName=1&secondName=1_2&level2code=S4104"
+                                                title=环保工程及服务 data-type="undefined" data-level2code="S4104">环保工程及服务</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_55&firstName=1&secondName=1_2&level2code=S4204"
+                                                title=航空运输 data-type="undefined" data-level2code="S4204">航空运输</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_57&firstName=1&secondName=1_2&level2code=S4206"
+                                                title=航运 data-type="undefined" data-level2code="S4206">航运</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_93&firstName=1&secondName=1_2&level2code=S6501"
+                                                title=航天装备 data-type="undefined" data-level2code="S6501">航天装备</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_94&firstName=1&secondName=1_2&level2code=S6502"
+                                                title=航空装备 data-type="undefined" data-level2code="S6502">航空装备</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_101&firstName=1&secondName=1_2&level2code=S7203"
+                                                title=互联网传媒 data-type="undefined" data-level2code="S7203">互联网传媒</a></li>
+                                        <li><span class="initial">J</span><a
+                                                href="#exchange=CN&plate=1_2_19&firstName=1&secondName=1_2&level2code=S2402"
+                                                title=金属非金属新材料 data-type="undefined"
+                                                data-level2code="S2402">金属非金属新材...</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_40&firstName=1&secondName=1_2&level2code=S3603"
+                                                title=家用轻工 data-type="undefined" data-level2code="S3603">家用轻工</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_56&firstName=1&secondName=1_2&level2code=S4205"
+                                                title=机场 data-type="undefined" data-level2code="S4205">机场</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_66&firstName=1&secondName=1_2&level2code=S4601"
+                                                title=景点 data-type="undefined" data-level2code="S4601">景点</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_67&firstName=1&secondName=1_2&level2code=S4602"
+                                                title=酒店 data-type="undefined" data-level2code="S4602">酒店</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_81&firstName=1&secondName=1_2&level2code=S6203"
+                                                title=基础建设 data-type="undefined" data-level2code="S6203">基础建设</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_91&firstName=1&secondName=1_2&level2code=S6404"
+                                                title=金属制品 data-type="undefined" data-level2code="S6404">金属制品</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_97&firstName=1&secondName=1_2&level2code=S7101"
+                                                title=计算机设备 data-type="undefined" data-level2code="S7101">计算机设备</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_98&firstName=1&secondName=1_2&level2code=S7102"
+                                                title=计算机应用 data-type="undefined" data-level2code="S7102">计算机应用</a></li>
+                                        <li><span class="initial">L</span><a
+                                                href="#exchange=CN&plate=1_2_2&firstName=1&secondName=1_2&level2code=S1103"
+                                                title=林业 data-type="undefined" data-level2code="S1103">林业</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_68&firstName=1&secondName=1_2&level2code=S4603"
+                                                title=旅游综合 data-type="undefined" data-level2code="S4603">旅游综合</a></li>
+                                        <li><span class="initial">M</span><a
+                                                href="#exchange=CN&plate=1_2_9&firstName=1&secondName=1_2&level2code=S2102"
+                                                title=煤炭开采 data-type="undefined" data-level2code="S2102">煤炭开采</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_62&firstName=1&secondName=1_2&level2code=S4502"
+                                                title=贸易 data-type="undefined" data-level2code="S4502">贸易</a></li>
+                                        <li><span class="initial">N</span><a
+                                                href="#exchange=CN&plate=1_2_4&firstName=1&secondName=1_2&level2code=S1105"
+                                                title=农产品加工 data-type="undefined" data-level2code="S1105">农产品加工</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_5&firstName=1&secondName=1_2&level2code=S1106"
+                                                title=农业综合 data-type="undefined" data-level2code="S1106">农业综合</a></li>
+                                        <li><span class="initial">Q</span><a
+                                                href="#exchange=CN&plate=1_2_10&firstName=1&secondName=1_2&level2code=S2103"
+                                                title=其他采掘 data-type="undefined" data-level2code="S2103">其他采掘</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_26&firstName=1&secondName=1_2&level2code=S2704"
+                                                title=其他电子 data-type="undefined" data-level2code="S2704">其他电子</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_28&firstName=1&secondName=1_2&level2code=S2801"
+                                                title=汽车整车 data-type="undefined" data-level2code="S2801">汽车整车</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_29&firstName=1&secondName=1_2&level2code=S2802"
+                                                title=汽车零部件 data-type="undefined" data-level2code="S2802">汽车零部件</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_30&firstName=1&secondName=1_2&level2code=S2803"
+                                                title=汽车服务 data-type="undefined" data-level2code="S2803">汽车服务</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_31&firstName=1&secondName=1_2&level2code=S2804"
+                                                title=其他交运设备 data-type="undefined" data-level2code="S2804">其他交运设备</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_41&firstName=1&secondName=1_2&level2code=S3604"
+                                                title=其他轻工制造 data-type="undefined" data-level2code="S3604">其他轻工制造</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_70&firstName=1&secondName=1_2&level2code=S4605"
+                                                title=其他休闲服务 data-type="undefined" data-level2code="S4605">其他休闲服务</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_78&firstName=1&secondName=1_2&level2code=S6103"
+                                                title=其他建材 data-type="undefined" data-level2code="S6103">其他建材</a></li>
+                                        <li><span class="initial">R</span><a
+                                                href="#exchange=CN&plate=1_2_50&firstName=1&secondName=1_2&level2code=S4103"
+                                                title=燃气 data-type="undefined" data-level2code="S4103">燃气</a></li>
+                                        <li><span class="initial">S</span><a
+                                                href="#exchange=CN&plate=1_2_3&firstName=1&secondName=1_2&level2code=S1104"
+                                                title=饲料 data-type="undefined" data-level2code="S1104">饲料</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_8&firstName=1&secondName=1_2&level2code=S2101"
+                                                title=石油开采 data-type="undefined" data-level2code="S2101">石油开采</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_12&firstName=1&secondName=1_2&level2code=S2201"
+                                                title=石油化工 data-type="undefined" data-level2code="S2201">石油化工</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_16&firstName=1&secondName=1_2&level2code=S2205"
+                                                title=塑料 data-type="undefined" data-level2code="S2205">塑料</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_33&firstName=1&secondName=1_2&level2code=S3302"
+                                                title=视听器材 data-type="undefined" data-level2code="S3302">视听器材</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_35&firstName=1&secondName=1_2&level2code=S3404"
+                                                title=食品加工 data-type="undefined" data-level2code="S3404">食品加工</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_44&firstName=1&secondName=1_2&level2code=S3703"
+                                                title=生物制品 data-type="undefined" data-level2code="S3703">生物制品</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_49&firstName=1&secondName=1_2&level2code=S4102"
+                                                title=水务 data-type="undefined" data-level2code="S4102">水务</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_65&firstName=1&secondName=1_2&level2code=S4505"
+                                                title=商业物业经营 data-type="undefined" data-level2code="S4505">商业物业经营</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_76&firstName=1&secondName=1_2&level2code=S6101"
+                                                title=水泥制造 data-type="undefined" data-level2code="S6101">水泥制造</a></li>
+                                        <li><span class="initial">T</span><a
+                                                href="#exchange=CN&plate=1_2_58&firstName=1&secondName=1_2&level2code=S4207"
+                                                title=铁路运输 data-type="undefined" data-level2code="S4207">铁路运输</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_88&firstName=1&secondName=1_2&level2code=S6401"
+                                                title=通用机械 data-type="undefined" data-level2code="S6401">通用机械</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_102&firstName=1&secondName=1_2&level2code=S7301"
+                                                title=通信运营 data-type="undefined" data-level2code="S7301">通信运营</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_103&firstName=1&secondName=1_2&level2code=S7302"
+                                                title=通信设备 data-type="undefined" data-level2code="S7302">通信设备</a></li>
+                                        <li><span class="initial">W</span><a
+                                                href="#exchange=CN&plate=1_2_59&firstName=1&secondName=1_2&level2code=S4208"
+                                                title=物流 data-type="undefined" data-level2code="S4208">物流</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_99&firstName=1&secondName=1_2&level2code=S7201"
+                                                title=文化传媒 data-type="undefined" data-level2code="S7201">文化传媒</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="initial">X</span><a
+                                                href="#exchange=CN&plate=1_2_17&firstName=1&secondName=1_2&level2code=S2206"
+                                                title=橡胶 data-type="undefined" data-level2code="S2206">橡胶</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_22&firstName=1&secondName=1_2&level2code=S2405"
+                                                title=稀有金属 data-type="undefined" data-level2code="S2405">稀有金属</a></li>
+                                        <li><span class="initial">Y</span><a
+                                                href="#exchange=CN&plate=1_2_1&firstName=1&secondName=1_2&level2code=S1102"
+                                                title=渔业 data-type="undefined" data-level2code="S1102">渔业</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_24&firstName=1&secondName=1_2&level2code=S2702"
+                                                title=元件 data-type="undefined" data-level2code="S2702">元件</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_34&firstName=1&secondName=1_2&level2code=S3403"
+                                                title=饮料制造 data-type="undefined" data-level2code="S3403">饮料制造</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_45&firstName=1&secondName=1_2&level2code=S3704"
+                                                title=医药商业 data-type="undefined" data-level2code="S3704">医药商业</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_46&firstName=1&secondName=1_2&level2code=S3705"
+                                                title=医疗器械 data-type="undefined" data-level2code="S3705">医疗器械</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_47&firstName=1&secondName=1_2&level2code=S3706"
+                                                title=医疗服务 data-type="undefined" data-level2code="S3706">医疗服务</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_61&firstName=1&secondName=1_2&level2code=S4302"
+                                                title=园区开发 data-type="undefined" data-level2code="S4302">园区开发</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_63&firstName=1&secondName=1_2&level2code=S4503"
+                                                title=一般零售 data-type="undefined" data-level2code="S4503">一般零售</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_71&firstName=1&secondName=1_2&level2code=S4801"
+                                                title=银行 data-type="undefined" data-level2code="S4801">银行</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_83&firstName=1&secondName=1_2&level2code=S6205"
+                                                title=园林工程 data-type="undefined" data-level2code="S6205">园林工程</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_90&firstName=1&secondName=1_2&level2code=S6403"
+                                                title=仪器仪表 data-type="undefined" data-level2code="S6403">仪器仪表</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_92&firstName=1&secondName=1_2&level2code=S6405"
+                                                title=运输设备 data-type="undefined" data-level2code="S6405">运输设备</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_100&firstName=1&secondName=1_2&level2code=S7202"
+                                                title=营销传播 data-type="undefined" data-level2code="S7202">营销传播</a></li>
+                                        <li><span class="initial">Z</span><a
+                                                href="#exchange=CN&plate=1_2_0&firstName=1&secondName=1_2&level2code=S1101"
+                                                title=种植业 data-type="undefined" data-level2code="S1101">种植业</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_38&firstName=1&secondName=1_2&level2code=S3601"
+                                                title=造纸 data-type="undefined" data-level2code="S3601">造纸</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_43&firstName=1&secondName=1_2&level2code=S3702"
+                                                title=中药 data-type="undefined" data-level2code="S3702">中药</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_64&firstName=1&secondName=1_2&level2code=S4504"
+                                                title=专业零售 data-type="undefined" data-level2code="S4504">专业零售</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_72&firstName=1&secondName=1_2&level2code=S4901"
+                                                title=证券 data-type="undefined" data-level2code="S4901">证券</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_75&firstName=1&secondName=1_2&level2code=S5101"
+                                                title=综合 data-type="undefined" data-level2code="S5101">综合</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_80&firstName=1&secondName=1_2&level2code=S6202"
+                                                title=装修装饰 data-type="undefined" data-level2code="S6202">装修装饰</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_82&firstName=1&secondName=1_2&level2code=S6204"
+                                                title=专业工程 data-type="undefined" data-level2code="S6204">专业工程</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_2_89&firstName=1&secondName=1_2&level2code=S6402"
+                                                title=专用设备 data-type="undefined" data-level2code="S6402">专用设备</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><i class="list-style"></i>申万行业<i class="expand"></i></li>
+                            <li><i class="list-style"></i>排行<i class="expand"></i><span class="fold">  </span>
+                                <div class="third-nav">
+                                    <ul>
+                                        <li><span class="initial">C</span><a
+                                                href="#exchange=CN&plate=1_4_16&firstName=1&secondName=1_4&type=cyb&order=desc&order_by=percent"
+                                                title=创业板涨幅 data-type="cyb" data-level2code="">创业板涨幅</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_17&firstName=1&secondName=1_4&type=cyb&order=asc&order_by=percent"
+                                                title=创业板跌幅 data-type="cyb" data-level2code="">创业板跌幅</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_18&firstName=1&secondName=1_4&type=cyb&order=desc&order_by=amount"
+                                                title=创业板成交额 data-type="cyb" data-level2code="">创业板成交额</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_19&firstName=1&secondName=1_4&type=cyb&order=desc&order_by=volume"
+                                                title=创业板成交量 data-type="cyb" data-level2code="">创业板成交量</a></li>
+                                        <li><span class="initial">H</span><a
+                                                href="#exchange=CN&plate=1_4_0&firstName=1&secondName=1_4&type=sha&order=desc&order_by=percent"
+                                                title=沪A涨幅 data-type="sha" data-level2code="">沪A涨幅</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_1&firstName=1&secondName=1_4&type=sha&order=asc&order_by=percent"
+                                                title=沪A跌幅 data-type="sha" data-level2code="">沪A跌幅</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_2&firstName=1&secondName=1_4&type=sha&order=desc&order_by=amount"
+                                                title=沪A成交额 data-type="sha" data-level2code="">沪A成交额</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_3&firstName=1&secondName=1_4&type=sha&order=desc&order_by=volume"
+                                                title=沪A成交量 data-type="sha" data-level2code="">沪A成交量</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_4&firstName=1&secondName=1_4&type=shb&order=desc&order_by=percent"
+                                                title=沪B涨幅 data-type="shb" data-level2code="">沪B涨幅</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_5&firstName=1&secondName=1_4&type=shb&order=asc&order_by=percent"
+                                                title=沪B跌幅 data-type="shb" data-level2code="">沪B跌幅</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_6&firstName=1&secondName=1_4&type=shb&order=desc&order_by=amount"
+                                                title=沪B成交额 data-type="shb" data-level2code="">沪B成交额</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_7&firstName=1&secondName=1_4&type=shb&order=desc&order_by=volume"
+                                                title=沪B成交量 data-type="shb" data-level2code="">沪B成交量</a></li>
+                                        <li><span class="initial">S</span><a
+                                                href="#exchange=CN&plate=1_4_8&firstName=1&secondName=1_4&type=sza&order=desc&order_by=percent"
+                                                title=深A涨幅 data-type="sza" data-level2code="">深A涨幅</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_9&firstName=1&secondName=1_4&type=sza&order=asc&order_by=percent"
+                                                title=深A跌幅 data-type="sza" data-level2code="">深A跌幅</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_10&firstName=1&secondName=1_4&type=sza&order=desc&order_by=amount"
+                                                title=深A成交额 data-type="sza" data-level2code="">深A成交额</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_11&firstName=1&secondName=1_4&type=sza&order=desc&order_by=volume"
+                                                title=深A成交量 data-type="sza" data-level2code="">深A成交量</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_12&firstName=1&secondName=1_4&type=szb&order=desc&order_by=percent"
+                                                title=深B涨幅 data-type="szb" data-level2code="">深B涨幅</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_13&firstName=1&secondName=1_4&type=szb&order=asc&order_by=percent"
+                                                title=深B跌幅 data-type="szb" data-level2code="">深B跌幅</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_14&firstName=1&secondName=1_4&type=szb&order=desc&order_by=amount"
+                                                title=深B成交额 data-type="szb" data-level2code="">深B成交额</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_15&firstName=1&secondName=1_4&type=szb&order=desc&order_by=volume"
+                                                title=深B成交量 data-type="szb" data-level2code="">深B成交量</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="initial">Z</span><a
+                                                href="#exchange=CN&plate=1_4_20&firstName=1&secondName=1_4&type=zxb&order=desc&order_by=percent"
+                                                title=中小板涨幅 data-type="zxb" data-level2code="">中小板涨幅</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_21&firstName=1&secondName=1_4&type=zxb&order=asc&order_by=percent"
+                                                title=中小板跌幅 data-type="zxb" data-level2code="">中小板跌幅</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_22&firstName=1&secondName=1_4&type=zxb&order=desc&order_by=amount"
+                                                title=中小板成交额 data-type="zxb" data-level2code="">中小板成交额</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=CN&plate=1_4_23&firstName=1&secondName=1_4&type=zxb&order=desc&order_by=volume"
+                                                title=中小板成交量 data-type="zxb" data-level2code="">中小板成交量</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><i class="list-style"></i><a href="#xgss" title="新股上市">新股上市</a></li>
+                            <li><i class="list-style"></i><a href="#LHB" title="龙虎榜">龙虎榜</a></li>
+                            <li><i class="list-style"></i><a href="#AH" title="AH股溢价">AH股溢价</a></li>
+                            <li><i class="list-style"></i><a href="//xueqiu.com/hq/insider" title="内部交易">内部交易</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-container fold">
+                        <div class="first-nav nav2"><i></i><span class="name">香港股市</span></div>
+                        <ul class="second-nav">
+                            <li><i class="list-style"></i><a href="#exchange=HK&firstName=2&secondName=2_0"
+                                                             title="港股一览">港股一览</a></li>
+                            <li><i class="list-style"></i>恒生行业<i class="expand"></i><span class="fold">  </span>
+                                <div class="third-nav">
+                                    <ul>
+                                        <li><span class="initial">B</span><a
+                                                href="#exchange=HK&plate=2_1_24&firstName=2&secondName=2_1&level2code=5020"
+                                                title=保险 data-type="undefined" data-level2code="5020">保险</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_30&firstName=2&secondName=2_1&level2code=7030"
+                                                title=半导体 data-type="undefined" data-level2code="7030">半导体</a></li>
+                                        <li><span class="initial">D</span><a
+                                                href="#exchange=HK&plate=2_1_21&firstName=2&secondName=2_1&level2code=3500"
+                                                title=电讯 data-type="undefined" data-level2code="3500">电讯</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_26&firstName=2&secondName=2_1&level2code=6010"
+                                                title=地产 data-type="undefined" data-level2code="6010">地产</a></li>
+                                        <li><span class="initial">F</span><a
+                                                href="#exchange=HK&plate=2_1_11&firstName=2&secondName=2_1&level2code=2030"
+                                                title=纺织、服饰及个人护理 data-type="undefined"
+                                                data-level2code="2030">纺织、服饰及个...</a></li>
+                                        <li><span class="initial">G</span><a
+                                                href="#exchange=HK&plate=2_1_5&firstName=2&secondName=2_1&level2code=100"
+                                                title=工业制品 data-type="undefined" data-level2code="100">工业制品</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_6&firstName=2&secondName=2_1&level2code=1010"
+                                                title=工业工程 data-type="undefined" data-level2code="1010">工业工程</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_7&firstName=2&secondName=2_1&level2code=1020"
+                                                title=工用运输 data-type="undefined" data-level2code="1020">工用运输</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_8&firstName=2&secondName=2_1&level2code=1030"
+                                                title=工用支援 data-type="undefined" data-level2code="1030">工用支援</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_22&firstName=2&secondName=2_1&level2code=4000"
+                                                title=公用事业 data-type="undefined" data-level2code="4000">公用事业</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="initial">H</span><a
+                                                href="#exchange=HK&plate=2_1_2&firstName=2&secondName=2_1&level2code=0510"
+                                                title=黄金及贵金属 data-type="undefined" data-level2code="0510">黄金及贵金属</a>
+                                        </li>
+                                        <li><span class="initial">J</span><a
+                                                href="#exchange=HK&plate=2_1_10&firstName=2&secondName=2_1&level2code=2020"
+                                                title=家庭电器及用品 data-type="undefined" data-level2code="2020">家庭电器及用品</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_16&firstName=2&secondName=2_1&level2code=3020"
+                                                title=酒店、赌场及消闲设施 data-type="undefined"
+                                                data-level2code="3020">酒店、赌场及消...</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_27&firstName=2&secondName=2_1&level2code=6020"
+                                                title=建筑 data-type="undefined" data-level2code="6020">建筑</a></li>
+                                        <li><span class="initial">L</span><a
+                                                href="#exchange=HK&plate=2_1_15&firstName=2&secondName=2_1&level2code=3010"
+                                                title=零售 data-type="undefined" data-level2code="3010">零售</a></li>
+                                        <li><span class="initial">M</span><a
+                                                href="#exchange=HK&plate=2_1_1&firstName=2&secondName=2_1&level2code=0020"
+                                                title=煤炭 data-type="undefined" data-level2code="0020">煤炭</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_17&firstName=2&secondName=2_1&level2code=3030"
+                                                title=媒体及娱乐 data-type="undefined" data-level2code="3030">媒体及娱乐</a></li>
+                                        <li><span class="initial">N</span><a
+                                                href="#exchange=HK&plate=2_1_14&firstName=2&secondName=2_1&level2code=2060"
+                                                title=农业产品 data-type="undefined" data-level2code="2060">农业产品</a></li>
+                                        <li><span class="initial">Q</span><a
+                                                href="#exchange=HK&plate=2_1_9&firstName=2&secondName=2_1&level2code=2010"
+                                                title=汽车 data-type="undefined" data-level2code="2010">汽车</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_25&firstName=2&secondName=2_1&level2code=5030"
+                                                title=其他金融 data-type="undefined" data-level2code="5030">其他金融</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="initial">R</span><a
+                                                href="#exchange=HK&plate=2_1_29&firstName=2&secondName=2_1&level2code=7020"
+                                                title=软件服务 data-type="undefined" data-level2code="7020">软件服务</a></li>
+                                        <li><span class="initial">S</span><a
+                                                href="#exchange=HK&plate=2_1_0&firstName=2&secondName=2_1&level2code=0010"
+                                                title=石油及天然气 data-type="undefined" data-level2code="0010">石油及天然气</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_12&firstName=2&secondName=2_1&level2code=2040"
+                                                title=食物饮品 data-type="undefined" data-level2code="2040">食物饮品</a></li>
+                                        <li><span class="initial">Y</span><a
+                                                href="#exchange=HK&plate=2_1_3&firstName=2&secondName=2_1&level2code=0520"
+                                                title=一般金属及矿石 data-type="undefined" data-level2code="0520">一般金属及矿石</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_4&firstName=2&secondName=2_1&level2code=0530"
+                                                title=原材料 data-type="undefined" data-level2code="0530">原材料</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_13&firstName=2&secondName=2_1&level2code=2050"
+                                                title=医疗保健 data-type="undefined" data-level2code="2050">医疗保健</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_18&firstName=2&secondName=2_1&level2code=3040"
+                                                title=运输 data-type="undefined" data-level2code="3040">运输</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_19&firstName=2&secondName=2_1&level2code=3045"
+                                                title=医疗保健服务 data-type="undefined" data-level2code="3045">医疗保健服务</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_23&firstName=2&secondName=2_1&level2code=5010"
+                                                title=银行 data-type="undefined" data-level2code="5010">银行</a></li>
+                                        <li><span class="initial">Z</span><a
+                                                href="#exchange=HK&plate=2_1_20&firstName=2&secondName=2_1&level2code=3050"
+                                                title=支援服务 data-type="undefined" data-level2code="3050">支援服务</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_28&firstName=2&secondName=2_1&level2code=7010"
+                                                title=资讯科技器材 data-type="undefined" data-level2code="7010">资讯科技器材</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=HK&plate=2_1_31&firstName=2&secondName=2_1&level2code=8000"
+                                                title=综合企业 data-type="undefined" data-level2code="8000">综合企业</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><i class="list-style"></i><a href="#exchange=HK&industry=2_2&firstName=2" title="新股上市">新股上市</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-container fold">
+                        <div class="first-nav nav3"><i></i><span class="name">美国股市</span></div>
+                        <ul class="second-nav">
+                            <li><i class="list-style"></i><a href="#exchange=US&firstName=3&secondName=3_0"
+                                                             title="美股一览">美股一览</a></li>
+                            <li><i class="list-style"></i>GICS行业<i class="expand"></i><span class="fold">  </span>
+                                <div class="third-nav">
+                                    <ul>
+                                        <li><span class="initial">B</span><a
+                                                href="#exchange=US&plate=3_1_50&firstName=3&secondName=3_1&level2code=403010"
+                                                title=保险 data-type="undefined" data-level2code="403010">保险</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_56&firstName=3&secondName=3_1&level2code=453010"
+                                                title=半导体产品与设备 data-type="undefined"
+                                                data-level2code="453010">半导体产品与设...</a></li>
+                                        <li><span class="initial">D</span><a
+                                                href="#exchange=US&plate=3_1_10&firstName=3&secondName=3_1&level2code=201040"
+                                                title=电气设备 data-type="undefined" data-level2code="201040">电气设备</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_30&firstName=3&secondName=3_1&level2code=255030"
+                                                title=多元化零售 data-type="undefined" data-level2code="255030">多元化零售</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_49&firstName=3&secondName=3_1&level2code=402040"
+                                                title=抵押房地产投资信托（REITs） data-type="undefined" data-level2code="402040">抵押房地产投资...</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_54&firstName=3&secondName=3_1&level2code=452020"
+                                                title=电脑与外围设备 data-type="undefined" data-level2code="452020">电脑与外围设备</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_55&firstName=3&secondName=3_1&level2code=452030"
+                                                title=电子设备、仪器和元件 data-type="undefined" data-level2code="452030">电子设备、仪器...</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_62&firstName=3&secondName=3_1&level2code=551010"
+                                                title=电力公用事业 data-type="undefined" data-level2code="551010">电力公用事业</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_66&firstName=3&secondName=3_1&level2code=551050"
+                                                title=独立电力生产商与能源贸易商 data-type="undefined" data-level2code="551050">独立电力生产商...</a>
+                                        </li>
+                                        <li><span class="initial">F</span><a
+                                                href="#exchange=US&plate=3_1_25&firstName=3&secondName=3_1&level2code=252030"
+                                                title=纺织品、服装与奢侈品 data-type="undefined" data-level2code="252030">纺织品、服装与...</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_64&firstName=3&secondName=3_1&level2code=551030"
+                                                title=复合型公用事业 data-type="undefined" data-level2code="551030">复合型公用事业</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_68&firstName=3&secondName=3_1&level2code=601020"
+                                                title=房地产管理和开发 data-type="undefined"
+                                                data-level2code="601020">房地产管理和开...</a></li>
+                                        <li><span class="initial">G</span><a
+                                                href="#exchange=US&plate=3_1_11&firstName=3&secondName=3_1&level2code=201050"
+                                                title=工业集团企业 data-type="undefined" data-level2code="201050">工业集团企业</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_19&firstName=3&secondName=3_1&level2code=203040"
+                                                title=公路与铁路 data-type="undefined" data-level2code="203040">公路与铁路</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_37&firstName=3&secondName=3_1&level2code=303020"
+                                                title=个人用品 data-type="undefined" data-level2code="303020">个人用品</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_67&firstName=3&secondName=3_1&level2code=601010"
+                                                title=股权房地产投资信托 （REITs） data-type="undefined" data-level2code="601010">股权房地产投资...</a>
+                                        </li>
+                                        <li><span class="initial">H</span><a
+                                                href="#exchange=US&plate=3_1_2&firstName=3&secondName=3_1&level2code=151010"
+                                                title=化学制品 data-type="undefined" data-level2code="151010">化学制品</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_7&firstName=3&secondName=3_1&level2code=201010"
+                                                title=航空航天与国防 data-type="undefined" data-level2code="201010">航空航天与国防</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_16&firstName=3&secondName=3_1&level2code=203010"
+                                                title=航空货运与物流 data-type="undefined" data-level2code="203010">航空货运与物流</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_17&firstName=3&secondName=3_1&level2code=203020"
+                                                title=航空公司 data-type="undefined" data-level2code="203020">航空公司</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_18&firstName=3&secondName=3_1&level2code=203030"
+                                                title=海运 data-type="undefined" data-level2code="203030">海运</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_29&firstName=3&secondName=3_1&level2code=255020"
+                                                title=互联网与直销零售 data-type="undefined"
+                                                data-level2code="255020">互联网与直销零...</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_45&firstName=3&secondName=3_1&level2code=401020"
+                                                title=互助储蓄银行与抵押信贷 data-type="undefined" data-level2code="401020">互助储蓄银行与...</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_61&firstName=3&secondName=3_1&level2code=502030"
+                                                title=互动媒体与服务 data-type="undefined" data-level2code="502030">互动媒体与服务</a>
+                                        </li>
+                                        <li><span class="initial">J</span><a
+                                                href="#exchange=US&plate=3_1_3&firstName=3&secondName=3_1&level2code=151020"
+                                                title=建筑材料 data-type="undefined" data-level2code="151020">建筑材料</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_5&firstName=3&secondName=3_1&level2code=151040"
+                                                title=金属与采矿 data-type="undefined" data-level2code="151040">金属与采矿</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_8&firstName=3&secondName=3_1&level2code=201020"
+                                                title=建筑产品 data-type="undefined" data-level2code="201020">建筑产品</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_9&firstName=3&secondName=3_1&level2code=201030"
+                                                title=建筑与工程 data-type="undefined" data-level2code="201030">建筑与工程</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_12&firstName=3&secondName=3_1&level2code=201060"
+                                                title=机械制造 data-type="undefined" data-level2code="201060">机械制造</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_20&firstName=3&secondName=3_1&level2code=203050"
+                                                title=交通基本设施 data-type="undefined" data-level2code="203050">交通基本设施</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_23&firstName=3&secondName=3_1&level2code=252010"
+                                                title=家庭耐用消费品 data-type="undefined" data-level2code="252010">家庭耐用消费品</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_26&firstName=3&secondName=3_1&level2code=253010"
+                                                title=酒店、餐馆与休闲 data-type="undefined"
+                                                data-level2code="253010">酒店、餐馆与休...</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_28&firstName=3&secondName=3_1&level2code=255010"
+                                                title=经销商 data-type="undefined" data-level2code="255010">经销商</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_36&firstName=3&secondName=3_1&level2code=303010"
+                                                title=居家用品 data-type="undefined" data-level2code="303010">居家用品</a></li>
+                                        <li><span class="initial">M</span><a
+                                                href="#exchange=US&plate=3_1_13&firstName=3&secondName=3_1&level2code=201070"
+                                                title=贸易公司与经销商 data-type="undefined"
+                                                data-level2code="201070">贸易公司与经销...</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_59&firstName=3&secondName=3_1&level2code=502010"
+                                                title=媒体 data-type="undefined" data-level2code="502010">媒体</a></li>
+                                        <li><span class="initial">N</span><a
+                                                href="#exchange=US&plate=3_1_0&firstName=3&secondName=3_1&level2code=101010"
+                                                title=能源设备与服务 data-type="undefined" data-level2code="101010">能源设备与服务</a>
+                                        </li>
+                                        <li><span class="initial">Q</span><a
+                                                href="#exchange=US&plate=3_1_21&firstName=3&secondName=3_1&level2code=251010"
+                                                title=汽车零配件 data-type="undefined" data-level2code="251010">汽车零配件</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_22&firstName=3&secondName=3_1&level2code=251020"
+                                                title=汽车 data-type="undefined" data-level2code="251020">汽车</a></li>
+                                        <li><span class="initial">R</span><a
+                                                href="#exchange=US&plate=3_1_4&firstName=3&secondName=3_1&level2code=151030"
+                                                title=容器与包装 data-type="undefined" data-level2code="151030">容器与包装</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_52&firstName=3&secondName=3_1&level2code=451030"
+                                                title=软件 data-type="undefined" data-level2code="451030">软件</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_63&firstName=3&secondName=3_1&level2code=551020"
+                                                title=燃气公用事业 data-type="undefined" data-level2code="551020">燃气公用事业</a>
+                                        </li>
+                                        <li><span class="initial">S</span><a
+                                                href="#exchange=US&plate=3_1_1&firstName=3&secondName=3_1&level2code=101020"
+                                                title=石油、天然气与消费用燃料 data-type="undefined" data-level2code="101020">石油、天然气与...</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_14&firstName=3&secondName=3_1&level2code=202010"
+                                                title=商业服务与商业用品 data-type="undefined" data-level2code="202010">商业服务与商业...</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_32&firstName=3&secondName=3_1&level2code=301010"
+                                                title=食品与主要用品零售 data-type="undefined" data-level2code="301010">食品与主要用品...</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_34&firstName=3&secondName=3_1&level2code=302020"
+                                                title=食品 data-type="undefined" data-level2code="302020">食品</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_41&firstName=3&secondName=3_1&level2code=352010"
+                                                title=生物科技 data-type="undefined" data-level2code="352010">生物科技</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_43&firstName=3&secondName=3_1&level2code=352030"
+                                                title=生命科学工具和服务 data-type="undefined" data-level2code="352030">生命科学工具和...</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_44&firstName=3&secondName=3_1&level2code=401010"
+                                                title=商业银行 data-type="undefined" data-level2code="401010">商业银行</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_65&firstName=3&secondName=3_1&level2code=551040"
+                                                title=水公用事业 data-type="undefined" data-level2code="551040">水公用事业</a>
+                                        </li>
+                                        <li><span class="initial">T</span><a
+                                                href="#exchange=US&plate=3_1_53&firstName=3&secondName=3_1&level2code=452010"
+                                                title=通信设备 data-type="undefined" data-level2code="452010">通信设备</a></li>
+                                        <li><span class="initial">W</span><a
+                                                href="#exchange=US&plate=3_1_58&firstName=3&secondName=3_1&level2code=501020"
+                                                title=无线电信业务 data-type="undefined" data-level2code="501020">无线电信业务</a>
+                                        </li>
+                                        <li><span class="initial">X</span><a
+                                                href="#exchange=US&plate=3_1_24&firstName=3&secondName=3_1&level2code=252020"
+                                                title=休闲设备与用品 data-type="undefined" data-level2code="252020">休闲设备与用品</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_47&firstName=3&secondName=3_1&level2code=402020"
+                                                title=消费信贷 data-type="undefined" data-level2code="402020">消费信贷</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_51&firstName=3&secondName=3_1&level2code=451020"
+                                                title=信息技术服务 data-type="undefined" data-level2code="451020">信息技术服务</a>
+                                        </li>
+                                        <li><span class="initial">Y</span><a
+                                                href="#exchange=US&plate=3_1_33&firstName=3&secondName=3_1&level2code=302010"
+                                                title=饮料 data-type="undefined" data-level2code="302010">饮料</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_35&firstName=3&secondName=3_1&level2code=302030"
+                                                title=烟草 data-type="undefined" data-level2code="302030">烟草</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_38&firstName=3&secondName=3_1&level2code=351010"
+                                                title=医疗保健设备与用品 data-type="undefined" data-level2code="351010">医疗保健设备与...</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_39&firstName=3&secondName=3_1&level2code=351020"
+                                                title=医疗保健提供商与服务 data-type="undefined" data-level2code="351020">医疗保健提供商...</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_40&firstName=3&secondName=3_1&level2code=351030"
+                                                title=医疗保健技术 data-type="undefined" data-level2code="351030">医疗保健技术</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_60&firstName=3&secondName=3_1&level2code=502020"
+                                                title=娱乐 data-type="undefined" data-level2code="502020">娱乐</a></li>
+                                        <li><span class="initial">Z</span><a
+                                                href="#exchange=US&plate=3_1_6&firstName=3&secondName=3_1&level2code=151050"
+                                                title=纸类与林业产品 data-type="undefined" data-level2code="151050">纸类与林业产品</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_15&firstName=3&secondName=3_1&level2code=202020"
+                                                title=专业服务 data-type="undefined" data-level2code="202020">专业服务</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_27&firstName=3&secondName=3_1&level2code=253020"
+                                                title=综合消费者服务 data-type="undefined" data-level2code="253020">综合消费者服务</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_31&firstName=3&secondName=3_1&level2code=255040"
+                                                title=专营零售 data-type="undefined" data-level2code="255040">专营零售</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_42&firstName=3&secondName=3_1&level2code=352020"
+                                                title=制药 data-type="undefined" data-level2code="352020">制药</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_46&firstName=3&secondName=3_1&level2code=402010"
+                                                title=综合金融服务 data-type="undefined" data-level2code="402010">综合金融服务</a>
+                                        </li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_48&firstName=3&secondName=3_1&level2code=402030"
+                                                title=资本市场 data-type="undefined" data-level2code="402030">资本市场</a></li>
+                                        <li><span class="initial"> </span><a
+                                                href="#exchange=US&plate=3_1_57&firstName=3&secondName=3_1&level2code=501010"
+                                                title=综合电信业务 data-type="undefined" data-level2code="501010">综合电信业务</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><i class="list-style"></i><a href="#exchange=US&industry=3_2&firstName=3" title="明星股">明星股</a>
+                            </li>
+                            <li><i class="list-style"></i><a href="#exchange=US&industry=3_3&firstName=3" title="中国概念股">中国概念股</a>
+                            </li>
+                            <li><i class="list-style"></i><a href="#exchange=US&industry=3_4&firstName=3" title="上市预告">上市预告</a>
+                            </li>
+                            <li><i class="list-style"></i><a href="#exchange=US&industry=3_5&firstName=3" title="新上市公司">新上市公司</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-container fold">
+                        <div class="first-nav nav4"><i></i><span class="name">债券及回购</span></div>
+                        <ul class="second-nav">
+                            <li><i class="list-style"></i><a href="#exchange=CN&industry=4_0&firstName=4" title="可转债">可转债</a>
+                            </li>
+                            <li><i class="list-style"></i><a href="#exchange=CN&industry=4_1&firstName=4"
+                                                             title="国债">国债</a></li>
+                            <li><i class="list-style"></i><a href="#exchange=CN&industry=4_2&firstName=4"
+                                                             title="企债">企债</a></li>
+                            <li><i class="list-style"></i><a href="#exchange=CN&industry=4_3&firstName=4"
+                                                             title="回购">回购</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-container fold">
+                        <div class="first-nav nav5"><i></i><span class="name">基金</span></div>
+                        <ul class="second-nav">
+                            <li><i class="list-style"></i><a href="#fundtype=11&pfundtype=1&industry=5_0&firstName=5"
+                                                             title="分级基金">分级基金</a></li>
+                            <li><i class="list-style"></i><a href="#fundtype=12&pfundtype=1&industry=5_1&firstName=5"
+                                                             title="货币型">货币型</a></li>
+                            <li><i class="list-style"></i><a href="#fundtype=13&pfundtype=1&industry=5_2&firstName=5"
+                                                             title="股票型">股票型</a></li>
+                            <li><i class="list-style"></i><a href="#fundtype=14&pfundtype=1&industry=5_3&firstName=5"
+                                                             title="债券型">债券型</a></li>
+                            <li><i class="list-style"></i><a href="#fundtype=15&pfundtype=1&industry=5_4&firstName=5"
+                                                             title="混合型">混合型</a></li>
+                            <li><i class="list-style"></i><a href="#fundtype=16&pfundtype=1&industry=5_5&firstName=5"
+                                                             title="QDII基金">QDII基金</a></li>
+                            <li><i class="list-style"></i><a href="#fundtype=17&pfundtype=1&industry=5_6&firstName=5"
+                                                             title="指数型基金">指数型基金</a></li>
+                            <li><i class="list-style"></i><a href="#fundtype=18&pfundtype=1&industry=5_7&firstName=5"
+                                                             title="ETF">ETF</a></li>
+                            <li><i class="list-style"></i><a href="#fundtype=19&pfundtype=1&industry=5_8&firstName=5"
+                                                             title="LOF">LOF</a></li>
+                            <li><i class="list-style"></i><a href="#fundtype=20&pfundtype=1&industry=5_9&firstName=5"
+                                                             title="FOF">FOF</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-container fold">
+                        <div class="first-nav nav6"><i></i><span class="name">私募</span></div>
+                        <ul class="second-nav">
+                            <li><i class="list-style"></i><a href="https://xueqiu.com/f/home?insider=1" title="私募中心">私募中心</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="share_wrapper">
+                        <div id="share"><h3>分享到：</h3>
+                            <li class="xueqiu"><i></i>雪球</li>
+                            <li class="sina"><i></i>新浪微博</li>
+                            <li class="qzone"><i></i>QQ空间</li>
+                            <li class="tqq"><i></i>腾讯微博</li>
+                            <li class="douban"><i></i>豆瓣</li>
+                            <li class="renren"><i></i>人人</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-container center-container">
+                    <div data-sort="1" class="market-overview module-container">
+                        <div class="title-header">
+                            <div class="title-name">市场一览</div>
+                            <div class="move-updown"><span title="上移板块" class="up"></span><span title="下移板块"
+                                                                                                class="down"></span>
+                            </div>
+                            <ul data-module="market-overview" class="groups-name">
+                                <li data-type="SH" class="selected">沪深</li>
+                                <li data-type="HK">港股</li>
+                                <li data-type="US">美股</li>
+                                <li data-type="MF">基金</li>
+                            </ul>
+                        </div>
+                        <div class="detail-container">
+                            <div class="stockLoading"></div>
+                        </div>
+                    </div>
+                    <div data-sort="2" class="stock-preview module-container">
+                        <div class="title-header">
+                            <div class="title-name">新股预告</div>
+                            <div class="move-updown"><span title="上移板块" class="up"></span><span title="下移板块"
+                                                                                                class="down"></span>
+                            </div>
+                            <ul data-module="stock-preview" class="groups-name">
+                                <li data-type="SH" class="selected">沪深</li>
+                                <li data-type="US">美股</li>
+                                <li data-type="HK">港股</li>
+                            </ul>
+                        </div>
+                        <div class="detail-container new-portfolio">
+                            <div class="stockLoading"></div>
+                        </div>
+                    </div>
+                    <div data-sort="3" class="quote-rank module-container">
+                        <div class="title-header">
+                            <div class="title-name">行情排行榜</div>
+                            <div class="move-updown"><span title="上移板块" class="up"></span><span title="下移板块"
+                                                                                                class="down"></span>
+                            </div>
+                            <ul data-module="quote-rank" class="groups-name">
+                                <li data-type="sha" class="selected">沪A</li>
+                                <li data-type="shb">沪B</li>
+                                <li data-type="sza">深A</li>
+                                <li data-type="szb">深B</li>
+                                <li data-type="cyb">创业板</li>
+                                <li data-type="zxb">中小板</li>
+                                <li data-type="hk">港股</li>
+                                <li data-type="us">美股</li>
+                            </ul>
+                        </div>
+                        <div class="detail-container">
+                            <div class="stockLoading"></div>
+                        </div>
+                    </div>
+                    <div data-sort="4" class="hot-rank module-container">
+                        <div class="title-header">
+                            <div class="title-name">热度排行榜</div>
+                            <div class="move-updown"><span title="上移板块" class="up"></span><span title="下移板块"
+                                                                                                class="down"></span>
+                            </div>
+                            <ul data-module="hot-rank" class="groups-name">
+                                <li data-type="SH" class="selected">沪深</li>
+                                <li data-type="US">美股</li>
+                                <li data-type="HK">港股</li>
+                            </ul>
+                        </div>
+                        <div class="detail-container">
+                            <div class="stockLoading"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stocklist-container center-container">
+                    <div id="stockList-header">
+                        <div class="stockList-nav"></div>
+                        <div class="stockList-pageCount">每页显示：<a href="#" data-size="30" class="selected">30</a><a
+                                href="#" data-size="60">60</a><a href="#" data-size="90">90</a></div>
+                        <div class="stockList-calendar"><a href="#" target="_blank">财报日历</a></div>
+                    </div>
+                    <div id="stockList-filter"></div>
+                    <div id="stockList">
+                        <div class="tableContainer new-portfolio"></div>
+                        <div class="stockLoading"></div>
+                    </div>
+                    <div id="pageList"></div>
+                </div>
+                <div class="newstock-container center-container">
+                    <div id="stockList-header">
+                        <div class="stockList-nav"></div>
+                    </div>
+                    <div data-sort="1" class="newstock-view newstock-table module-container">
+                        <div class="title-header">
+                            <div class="title-name">新股申购</div>
+                            <div class="move-updown"><span title="上移板块" class="up"></span><span title="下移板块"
+                                                                                                class="down"></span>
+                            </div>
+                            <a href="#exchange=CN&amp;plate=xgsg&amp;firstName=hsgs&amp;secondName=xgss"
+                               class="title-more">更多</a></div>
+                        <div class="detail-container new-portfolio">
+                            <div class="stockLoading"></div>
+                        </div>
+                    </div>
+                    <div data-sort="2" class="newstock-firstday newstock-table module-container">
+                        <div class="title-header">
+                            <div class="title-name">新股行情</div>
+                            <div class="move-updown"><span title="上移板块" class="up"></span><span title="下移板块"
+                                                                                                class="down"></span>
+                            </div>
+                            <a href="#exchange=CN&amp;plate=xghq&amp;firstName=hsgs&amp;secondName=xgss"
+                               class="title-more">更多</a></div>
+                        <div class="detail-container new-portfolio">
+                            <div class="stockLoading"></div>
+                        </div>
+                    </div>
+                    <div data-sort="3" class="newstock-income newstock-table module-container">
+                        <div class="title-header">
+                            <div class="title-name">打新收益</div>
+                            <div class="move-updown"><span title="上移板块" class="up"></span><span title="下移板块"
+                                                                                                class="down"></span>
+                            </div>
+                            <a href="#exchange=CN&amp;plate=dxsy&amp;firstName=hsgs&amp;secondName=xgss"
+                               class="title-more">更多</a></div>
+                        <div class="detail-container new-portfolio">
+                            <div class="stockLoading"></div>
+                        </div>
+                    </div>
+                    <div data-sort="4" class="newstock-analysis module-container">
+                        <div class="title-header">
+                            <div class="title-name">新股数据解析</div>
+                            <div class="move-updown"><span title="上移板块" class="up"></span><span title="下移板块"
+                                                                                                class="down"></span>
+                            </div>
+                        </div>
+                        <div class="detail-container">
+                            <ul class="chart-type"></ul>
+                            <div id="newstock-chart"></div>
+                            <div class="chart-info"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lhb-container center-container">
+                    <div id="stockList-header">
+                        <div class="stockList-nav"></div>
+                    </div>
+                    <div class="lhb-filter"><span>日期：</span><input type="text" class="lhb-date"/></div>
+                    <div class="lhb-stocklist new-portfolio">
+                        <div class="lhb-table">
+                            <table class="portfolio">
+                                <thead>
+                                <tr>
+                                    <th>股票名称</th>
+                                    <th>收盘价</th>
+                                    <th>涨跌幅</th>
+                                    <th>成交量</th>
+                                    <th>成交额</th>
+                                    <th class="reason">上榜原因</th>
+                                    <th>详情</th>
+                                </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <div class="stockLoading"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="confirm-dialog hidden">
+                <div class="confirm-dialog-mask"></div>
+                <div class="confirm-dialog-main">
+                    <div class="confirm-dialog-container">
+                        <div class="confirm-dialog-border"></div>
+                        <div class="confirm-dialog-content">
+                            <div class="confirm-dialog-content-hd">
+                                <image src="https://assets.imedao.com/images/fund/private_logo@3x.png"
+                                       class="fund-logo"></image>
+                            </div>
+                            <div class="confirm-dialog-content-bd"><h2>此产品为私募基金产品，仅向合格投资者进行推介，请确认</h2>
+                                <div class="p-wrap"><p>
+                                    根据《私募投资基金监督管理暂行办法》第四章第十四条规定：“私募基金管理人、私募基金销售机构不得向合格投资者之外的单位和个人募集资金，不得通过报刊、电台、电视、互联网等公众传播媒体或者讲座、报告会、分析会和布告、传单、手机短信、微信、博客和电子邮件等方式，向不特定对象宣传推介。”</p>
+                                    <p class="strong">雪球谨遵《私募投资基金监督管理暂行办法》之规定，只向特定的合格投资者宣传推介相关私募投资基金产品。</p>
+                                    <p>
+                                        阁下如有意进行私募投资基金投资，请详细阅读本提示并确认满足《私募投资基金监督管理暂行办法》关于“合规投资者”标准之规定，即具备相应风险识别能力和风险承担能力，投资于单只私募基金的金额不低于100万元，且金融类资产不低于300万元或者最近三年年均收入不低于50万元人民币的个人，或净资产不低于1000万元人民币的机构。阅读并确认为合规投资者，阁下方可获得由雪球提供的私募投资基金产品宣传推介服务。</p>
+                                </div>
+                                <div class="confirm-dialog-statement"><label><input type="checkbox" checked="checked"
+                                                                                    name="statementRead"/>我已阅读，并确认是合格的投资者</label>
+                                </div>
+                            </div>
+                            <div class="confirm-dialog-content-ft">
+                                <div class="confirm-dialog-cancle">返回</div>
+                                <div class="confirm-dialog-submit">确定</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <link rel="stylesheet" href="https://assets.imedao.com/style/fund/fund_dialog-dcee37.css"/>
+            <script src="https://assets.imedao.com/js/raphael-ea1c64.js"></script>
+            <!--script(src='#{staticDomain}/js/lib/axios.js')-->
+            <script>SNB.data.typeIndex = {
+                "0": "最近访问",
+                "1": "沪深股市",
+                "2": "香港股市",
+                "3": "美国股市",
+                "4": "债券及回购",
+                "5": "基金",
+                "6": "私募",
+                "0_0": "暂无访问",
+                "1_0": "沪深一览",
+                "1_1": "科创板",
+                "1_2": "基础分类",
+                "1_2_0": "种植业",
+                "1_2_1": "渔业",
+                "1_2_2": "林业",
+                "1_2_3": "饲料",
+                "1_2_4": "农产品加工",
+                "1_2_5": "农业综合",
+                "1_2_6": "畜禽养殖",
+                "1_2_7": "动物保健",
+                "1_2_8": "石油开采",
+                "1_2_9": "煤炭开采",
+                "1_2_10": "其他采掘",
+                "1_2_11": "采掘服务",
+                "1_2_12": "石油化工",
+                "1_2_13": "化学原料",
+                "1_2_14": "化学制品",
+                "1_2_15": "化学纤维",
+                "1_2_16": "塑料",
+                "1_2_17": "橡胶",
+                "1_2_18": "钢铁",
+                "1_2_19": "金属非金属新材料",
+                "1_2_20": "工业金属",
+                "1_2_21": "黄金",
+                "1_2_22": "稀有金属",
+                "1_2_23": "半导体",
+                "1_2_24": "元件",
+                "1_2_25": "光学光电子",
+                "1_2_26": "其他电子",
+                "1_2_27": "电子制造",
+                "1_2_28": "汽车整车",
+                "1_2_29": "汽车零部件",
+                "1_2_30": "汽车服务",
+                "1_2_31": "其他交运设备",
+                "1_2_32": "白色家电",
+                "1_2_33": "视听器材",
+                "1_2_34": "饮料制造",
+                "1_2_35": "食品加工",
+                "1_2_36": "纺织制造",
+                "1_2_37": "服装家纺",
+                "1_2_38": "造纸",
+                "1_2_39": "包装印刷",
+                "1_2_40": "家用轻工",
+                "1_2_41": "其他轻工制造",
+                "1_2_42": "化学制药",
+                "1_2_43": "中药",
+                "1_2_44": "生物制品",
+                "1_2_45": "医药商业",
+                "1_2_46": "医疗器械",
+                "1_2_47": "医疗服务",
+                "1_2_48": "电力",
+                "1_2_49": "水务",
+                "1_2_50": "燃气",
+                "1_2_51": "环保工程及服务",
+                "1_2_52": "港口",
+                "1_2_53": "高速公路",
+                "1_2_54": "公交",
+                "1_2_55": "航空运输",
+                "1_2_56": "机场",
+                "1_2_57": "航运",
+                "1_2_58": "铁路运输",
+                "1_2_59": "物流",
+                "1_2_60": "房地产开发",
+                "1_2_61": "园区开发",
+                "1_2_62": "贸易",
+                "1_2_63": "一般零售",
+                "1_2_64": "专业零售",
+                "1_2_65": "商业物业经营",
+                "1_2_66": "景点",
+                "1_2_67": "酒店",
+                "1_2_68": "旅游综合",
+                "1_2_69": "餐饮",
+                "1_2_70": "其他休闲服务",
+                "1_2_71": "银行",
+                "1_2_72": "证券",
+                "1_2_73": "保险",
+                "1_2_74": "多元金融",
+                "1_2_75": "综合",
+                "1_2_76": "水泥制造",
+                "1_2_77": "玻璃制造",
+                "1_2_78": "其他建材",
+                "1_2_79": "房屋建设",
+                "1_2_80": "装修装饰",
+                "1_2_81": "基础建设",
+                "1_2_82": "专业工程",
+                "1_2_83": "园林工程",
+                "1_2_84": "电机",
+                "1_2_85": "电气自动化设备",
+                "1_2_86": "电源设备",
+                "1_2_87": "高低压设备",
+                "1_2_88": "通用机械",
+                "1_2_89": "专用设备",
+                "1_2_90": "仪器仪表",
+                "1_2_91": "金属制品",
+                "1_2_92": "运输设备",
+                "1_2_93": "航天装备",
+                "1_2_94": "航空装备",
+                "1_2_95": "地面兵装",
+                "1_2_96": "船舶制造",
+                "1_2_97": "计算机设备",
+                "1_2_98": "计算机应用",
+                "1_2_99": "文化传媒",
+                "1_2_100": "营销传播",
+                "1_2_101": "互联网传媒",
+                "1_2_102": "通信运营",
+                "1_2_103": "通信设备",
+                "1_3": "申万行业",
+                "1_4": "排行",
+                "1_4_0": "沪A涨幅",
+                "1_4_1": "沪A跌幅",
+                "1_4_2": "沪A成交额",
+                "1_4_3": "沪A成交量",
+                "1_4_4": "沪B涨幅",
+                "1_4_5": "沪B跌幅",
+                "1_4_6": "沪B成交额",
+                "1_4_7": "沪B成交量",
+                "1_4_8": "深A涨幅",
+                "1_4_9": "深A跌幅",
+                "1_4_10": "深A成交额",
+                "1_4_11": "深A成交量",
+                "1_4_12": "深B涨幅",
+                "1_4_13": "深B跌幅",
+                "1_4_14": "深B成交额",
+                "1_4_15": "深B成交量",
+                "1_4_16": "创业板涨幅",
+                "1_4_17": "创业板跌幅",
+                "1_4_18": "创业板成交额",
+                "1_4_19": "创业板成交量",
+                "1_4_20": "中小板涨幅",
+                "1_4_21": "中小板跌幅",
+                "1_4_22": "中小板成交额",
+                "1_4_23": "中小板成交量",
+                "1_5": "新股上市",
+                "1_6": "龙虎榜",
+                "1_7": "AH股溢价",
+                "1_8": "内部交易",
+                "2_0": "港股一览",
+                "2_1": "恒生行业",
+                "2_1_0": "石油及天然气",
+                "2_1_1": "煤炭",
+                "2_1_2": "黄金及贵金属",
+                "2_1_3": "一般金属及矿石",
+                "2_1_4": "原材料",
+                "2_1_5": "工业制品",
+                "2_1_6": "工业工程",
+                "2_1_7": "工用运输",
+                "2_1_8": "工用支援",
+                "2_1_9": "汽车",
+                "2_1_10": "家庭电器及用品",
+                "2_1_11": "纺织、服饰及个人护理",
+                "2_1_12": "食物饮品",
+                "2_1_13": "医疗保健",
+                "2_1_14": "农业产品",
+                "2_1_15": "零售",
+                "2_1_16": "酒店、赌场及消闲设施",
+                "2_1_17": "媒体及娱乐",
+                "2_1_18": "运输",
+                "2_1_19": "医疗保健服务",
+                "2_1_20": "支援服务",
+                "2_1_21": "电讯",
+                "2_1_22": "公用事业",
+                "2_1_23": "银行",
+                "2_1_24": "保险",
+                "2_1_25": "其他金融",
+                "2_1_26": "地产",
+                "2_1_27": "建筑",
+                "2_1_28": "资讯科技器材",
+                "2_1_29": "软件服务",
+                "2_1_30": "半导体",
+                "2_1_31": "综合企业",
+                "2_2": "新股上市",
+                "3_0": "美股一览",
+                "3_1": "GICS行业",
+                "3_1_0": "能源设备与服务",
+                "3_1_1": "石油、天然气与消费用燃料",
+                "3_1_2": "化学制品",
+                "3_1_3": "建筑材料",
+                "3_1_4": "容器与包装",
+                "3_1_5": "金属与采矿",
+                "3_1_6": "纸类与林业产品",
+                "3_1_7": "航空航天与国防",
+                "3_1_8": "建筑产品",
+                "3_1_9": "建筑与工程",
+                "3_1_10": "电气设备",
+                "3_1_11": "工业集团企业",
+                "3_1_12": "机械制造",
+                "3_1_13": "贸易公司与经销商",
+                "3_1_14": "商业服务与商业用品",
+                "3_1_15": "专业服务",
+                "3_1_16": "航空货运与物流",
+                "3_1_17": "航空公司",
+                "3_1_18": "海运",
+                "3_1_19": "公路与铁路",
+                "3_1_20": "交通基本设施",
+                "3_1_21": "汽车零配件",
+                "3_1_22": "汽车",
+                "3_1_23": "家庭耐用消费品",
+                "3_1_24": "休闲设备与用品",
+                "3_1_25": "纺织品、服装与奢侈品",
+                "3_1_26": "酒店、餐馆与休闲",
+                "3_1_27": "综合消费者服务",
+                "3_1_28": "经销商",
+                "3_1_29": "互联网与直销零售",
+                "3_1_30": "多元化零售",
+                "3_1_31": "专营零售",
+                "3_1_32": "食品与主要用品零售",
+                "3_1_33": "饮料",
+                "3_1_34": "食品",
+                "3_1_35": "烟草",
+                "3_1_36": "居家用品",
+                "3_1_37": "个人用品",
+                "3_1_38": "医疗保健设备与用品",
+                "3_1_39": "医疗保健提供商与服务",
+                "3_1_40": "医疗保健技术",
+                "3_1_41": "生物科技",
+                "3_1_42": "制药",
+                "3_1_43": "生命科学工具和服务",
+                "3_1_44": "商业银行",
+                "3_1_45": "互助储蓄银行与抵押信贷",
+                "3_1_46": "综合金融服务",
+                "3_1_47": "消费信贷",
+                "3_1_48": "资本市场",
+                "3_1_49": "抵押房地产投资信托（REITs）",
+                "3_1_50": "保险",
+                "3_1_51": "信息技术服务",
+                "3_1_52": "软件",
+                "3_1_53": "通信设备",
+                "3_1_54": "电脑与外围设备",
+                "3_1_55": "电子设备、仪器和元件",
+                "3_1_56": "半导体产品与设备",
+                "3_1_57": "综合电信业务",
+                "3_1_58": "无线电信业务",
+                "3_1_59": "媒体",
+                "3_1_60": "娱乐",
+                "3_1_61": "互动媒体与服务",
+                "3_1_62": "电力公用事业",
+                "3_1_63": "燃气公用事业",
+                "3_1_64": "复合型公用事业",
+                "3_1_65": "水公用事业",
+                "3_1_66": "独立电力生产商与能源贸易商",
+                "3_1_67": "股权房地产投资信托 （REITs）",
+                "3_1_68": "房地产管理和开发",
+                "3_2": "明星股",
+                "3_3": "中国概念股",
+                "3_4": "上市预告",
+                "3_5": "新上市公司",
+                "4_0": "可转债",
+                "4_1": "国债",
+                "4_2": "企债",
+                "4_3": "回购",
+                "5_0": "分级基金",
+                "5_1": "货币型",
+                "5_2": "股票型",
+                "5_3": "债券型",
+                "5_4": "混合型",
+                "5_5": "QDII基金",
+                "5_6": "指数型基金",
+                "5_7": "ETF",
+                "5_8": "LOF",
+                "5_9": "FOF",
+                "6_0": "私募中心"
+            };
+
+            // 新股类型
+            var tempTypes = {
+                "xgsg": "新股申购",
+                "xghq": "新股行情",
+                "dxsy": "打新收益",
+                "hsgs": "沪深股市",
+                "xgss": "新股上市"
+            };
+            _.extend(SNB.data.typeIndex, tempTypes);
+
+            seajs.use("SNB.base.js", function () {
+                seajs.use("SNB.stockList_new.js");
+            });</script>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="copyright"><a href="/about/faq" target="_blank">常见问题</a><a href="/about/contact-us"
+                                                                           target="_blank">联系方式</a><a href="/about/jobs"
+                                                                                                      target="_blank">加入我们</a><a
+            href="https://danjuanapp.com/" target="_blank">蛋卷基金</a><a href="/about/what-is-xueqiu"
+                                                                      target="_blank">关于雪球</a><a>© 2019
+        XUEQIU.COM</a><br>
+        <p>互联网违法和不良信息举报电话：01061840600-8030 邮箱：secretary@xueqiu.com</p><a
+                href="http://xqimg.imedao.com/14ee3530b118403fee048f5b.png" target="_blank">京ICP证100666号</a><a
+                href="http://www.miibeian.gov.cn" target="_blank">京ICP备10040543</a><a>京公网安备11010502026957</a><br><a
+                href="http://xqimg.imedao.com/14d52aefd15e8f3fc0ce1fbd.png" target="_blank">证券业协会会员单位(代码817027)</a><a
+                href="http://xqimg.imedao.com/15ced2f59ab13fda8f10531f.jpg" target="_blank" rel="nofollow">广播电视节目制作经营许可证:
+            (京)字第08638号</a><br>
+        <p>风险提示：雪球里任何用户或者嘉宾的发言，都有其特定立场，投资决策需要建立在独立思考之上。</p></div>
+</div>
+<script>var _hmt = _hmt || [];
+(function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?1db88642e346389874251b5a1eded6e3";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();</script>
+<script>var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16079156-4']);
+_gaq.push(['_setDomainName', 'none']);
+_gaq.push(['_trackPageview']);
+
+(function () {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+})();
+
+window.onerror = function (message, file, line) {
+    var sFormattedMessage = '[' + file + ' (' + line + ')]' + message;
+    _gaq.push(['_trackEvent', 'Exceptions', 'Application', sFormattedMessage, null, true]);
+}</script>
+<script>if (window.jQuery) {
+    jQuery(function ($) {
+        $('.cube-invite').on('click', function () {
+            var href = $.trim($(this).attr('href'));
+            if (window._hmt) {
+                _hmt.push(['_trackEvent', 'cube-invite', 'click', href]);
+            }
+        });
+    });
+}</script>
+</body>
+</html>
