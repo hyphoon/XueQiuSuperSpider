@@ -18,6 +18,8 @@ import org.junit.Test;
 import java.net.URL;
 import java.rmi.RemoteException;
 import java.util.*;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ForkJoinPool;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -95,22 +97,26 @@ public class StreamTest {
 
     //统计股票5000粉以上大V个数，并以行业分类股票 （耗时过长）
     @Test
-    public void getStocksWithVipFollowersCount() throws RemoteException {
+    public void getStocksWithVipFollowersCount() throws RemoteException, ExecutionException, InterruptedException {
         CommissionIndustryCollector collector = new CommissionIndustryCollector();//搜集所有行业
         IndustryToStocksMapper mapper = new IndustryToStocksMapper();//搜集每个行业所有股票
         StockToVIPFollowerCountEntryMapper mapper1 = new StockToVIPFollowerCountEntryMapper(5000, 300);//搜集每个股票的粉丝
+//        StockToVIPFollowerCountEntryMapper mapper1 = new StockToVIPFollowerCountEntryMapper(5000, 30);//搜集每个股票的粉丝
         UserInfoToDBAcceptor acceptor = new UserInfoToDBAcceptor();//写入数据库
 
-        List<Entry<Stock, Integer>> res = collector.get()
-                .parallelStream() //并行流
-                .map(mapper)
-                .flatMap(Collection::stream)
-                .map(mapper1)
-                .peek(acceptor)
-                .collect(Collectors.toList());
-        for (Entry<Stock, Integer> re : res) {
-            System.out.println(re.getKey().getStockName() + " -> 5000粉丝以上大V个数  " + re.getValue());
-        }
+        ForkJoinPool myPool = new ForkJoinPool(12);
+        myPool.submit(() -> {
+            List<Entry<Stock, Integer>> res = collector.get()
+                    .parallelStream() //并行流
+                    .map(mapper)
+                    .flatMap(Collection::stream)
+                    .map(mapper1)
+                    .peek(acceptor)
+                    .collect(Collectors.toList());
+            for (Entry<Stock, Integer> re : res) {
+                System.out.println(re.getKey().getStockName() + " -> 5000粉丝以上大V个数  " + re.getValue());
+            }
+        }).get();
     }
 
     //最赚钱组合最新持仓以及收益走势、大盘走势
