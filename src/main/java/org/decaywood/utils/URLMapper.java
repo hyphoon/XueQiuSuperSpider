@@ -25,11 +25,14 @@ public enum URLMapper {
     STOCK_JSON("https://xueqiu.com/v4/stock/quote.json"),
 //    INDUSTRY_JSON("https://xueqiu.com/industry/quote_order.json"),
     INDUSTRY_JSON("https://xueqiu.com/service/v5/stock/screener/quote/list"),
-
     /*--------------------------------  NetEase     --------------------------------------*/
 
     NETEASE_MAIN_PAGE("https://quotes.money.163.com/stock"),
-    STOCK_CAPITAL_FLOW("https://quotes.money.163.com/service/zjlx_chart.html");
+    STOCK_CAPITAL_FLOW("https://quotes.money.163.com/service/zjlx_chart.html"),
+
+    /*-------------------------------- Leo -----------------------------------*/
+    // 个股K线数据， 样例： https://stock.xueqiu.com/v5/stock/chart/kline.json?symbol=SH600028&begin=1567676507378&period=day&type=before&count=-142&indicator=kline,pe,pb,ps,pcf,market_capital,agt,ggt,balance
+    STOCK_CHART_JSON("https://stock.xueqiu.com/v5/stock/chart/kline.json");
 
 
     URLMapper(String URL) {

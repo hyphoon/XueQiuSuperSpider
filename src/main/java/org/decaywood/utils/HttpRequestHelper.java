@@ -29,6 +29,17 @@ public class HttpRequestHelper {
                 .addToHeader("Accept-Encoding", "gzip,deflate,sdch");
     }
 
+
+    public HttpRequestHelper(String origin, String referer) {
+        this.config = new HashMap<>();
+        this.gzipDecode()
+                .addToHeader("Referer", referer)
+                .addToHeader("Origin", origin)
+                .addToHeader("Accept", "application/json, text/plain, */*")
+                .addToHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36")
+                .addToHeader("Accept-Encoding", "gzip,deflate,sdch");
+    }
+
     public HttpRequestHelper post() {
         this.post = true;
         return this;

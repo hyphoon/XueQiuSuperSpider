@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import java.rmi.RemoteException;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author: decaywood
@@ -21,8 +22,8 @@ public class StockToVIPFollowerCountEntryMapperTest {
         List<Stock> stocks = TestCaseGenerator.generateStocks();
         StockToVIPFollowerCountEntryMapper mapper = new StockToVIPFollowerCountEntryMapper();
         stocks.parallelStream().forEach(x -> {
-            Entry<Stock, Integer> count = mapper.apply(x);
-            System.out.println(x.getStockName() + "粉丝过万的关注者人数为： " + count.getValue() + " 人");
+            Entry<Stock, Map<String, Integer>> count = mapper.apply(x);
+            System.out.println(x.getStockName() + "粉丝过万的关注者人数为： " + count.getValue().get(StockToVIPFollowerCountEntryMapper.VALUE_KEY) + " 人");
         });
     }
 }

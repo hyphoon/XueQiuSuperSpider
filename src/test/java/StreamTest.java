@@ -1,5 +1,6 @@
 import entryFirst.UserInfoToDBAcceptor;
 import mapperTest.TestCaseGenerator;
+import org.apache.commons.lang3.time.DateUtils;
 import org.decaywood.collector.*;
 import org.decaywood.entity.*;
 import org.decaywood.entity.trend.StockTrend;
@@ -7,6 +8,7 @@ import org.decaywood.filter.PageKeyFilter;
 import org.decaywood.mapper.cubeFirst.CubeToCubeWithLastBalancingMapper;
 import org.decaywood.mapper.cubeFirst.CubeToCubeWithTrendMapper;
 import org.decaywood.mapper.dateFirst.DateToLongHuBangStockMapper;
+import org.decaywood.mapper.entryFirst.EntryToMacdCrossEntryMapper;
 import org.decaywood.mapper.industryFirst.IndustryToStocksMapper;
 import org.decaywood.mapper.stockFirst.StockToLongHuBangMapper;
 import org.decaywood.mapper.stockFirst.StockToStockWithAttributeMapper;
@@ -100,21 +102,22 @@ public class StreamTest {
     public void getStocksWithVipFollowersCount() throws RemoteException, ExecutionException, InterruptedException {
         CommissionIndustryCollector collector = new CommissionIndustryCollector();//搜集所有行业
         IndustryToStocksMapper mapper = new IndustryToStocksMapper();//搜集每个行业所有股票
-        StockToVIPFollowerCountEntryMapper mapper1 = new StockToVIPFollowerCountEntryMapper(5000, 300);//搜集每个股票的粉丝
-//        StockToVIPFollowerCountEntryMapper mapper1 = new StockToVIPFollowerCountEntryMapper(5000, 30);//搜集每个股票的粉丝
+        StockToVIPFollowerCountEntryMapper mapper1 = new StockToVIPFollowerCountEntryMapper(5000, 1);//搜集每个股票的粉丝
+        EntryToMacdCrossEntryMapper mapper2 = new EntryToMacdCrossEntryMapper(new Date());
         UserInfoToDBAcceptor acceptor = new UserInfoToDBAcceptor();//写入数据库
 
-        ForkJoinPool myPool = new ForkJoinPool(12);
+        ForkJoinPool myPool = new ForkJoinPool(1);
         myPool.submit(() -> {
-            List<Entry<Stock, Integer>> res = collector.get()
+            List<Entry<Stock, Map<String, Integer>>> res = collector.get()
                     .parallelStream() //并行流
                     .map(mapper)
                     .flatMap(Collection::stream)
                     .map(mapper1)
+                    .map(mapper2)
                     .peek(acceptor)
                     .collect(Collectors.toList());
-            for (Entry<Stock, Integer> re : res) {
-                System.out.println(re.getKey().getStockName() + " -> 5000粉丝以上大V个数  " + re.getValue());
+            for (Entry<Stock, Map<String, Integer>> re : res) {
+                System.out.println(re.getKey().getStockName() + " -> 5000粉丝以上大V个数  " + re.getValue().get(StockToVIPFollowerCountEntryMapper.VALUE_KEY));
             }
         }).get();
     }

@@ -38,38 +38,50 @@ public class IndustryToStocksMapper extends AbstractMapper<Industry, List<Stock>
     @Override
     public List<Stock> mapLogic(Industry industry) throws Exception {
 
-        if(industry == null || industry == EmptyObject.emptyIndustry) return new ArrayList<>();
+        if(industry == null || industry == EmptyObject.emptyIndustry)
+            return new ArrayList<>();
 
-        String target = URLMapper.INDUSTRY_JSON.toString();
-        RequestParaBuilder builder = new RequestParaBuilder(target);
-        builder.addParameter("page", 1)
-                .addParameter("size", 500)
-                .addParameter("order", "desc")
-                .addParameter("order_by", "percent")
-                .addParameter("exchange", "CN")
-                .addParameter("market", "CN");
-        String info = industry.getIndustryInfo();
-        if (info.startsWith("#")) info = info.substring(1);
-        for (String s : info.split("&")) {
-            String[] keyAndVal = s.split("=");
-            if ("level2code".equalsIgnoreCase(keyAndVal[0]))
-                builder.addParameter("ind_code", keyAndVal[1]);
+        try {
+            String target = URLMapper.INDUSTRY_JSON.toString();
+            RequestParaBuilder builder = new RequestParaBuilder(target);
+            builder.addParameter("page", 1)
+                    .addParameter("size", 500)
+                    .addParameter("order", "desc")
+                    .addParameter("order_by", "percent")
+                    .addParameter("exchange", "CN")
+                    .addParameter("market", "CN");
+            String info = industry.getIndustryInfo();
+            if (info.startsWith("#")) info = info.substring(1);
+            for (String s : info.split("&")) {
+                String[] keyAndVal = s.split("=");
+                if ("level2code".equalsIgnoreCase(keyAndVal[0]))
+                    builder.addParameter("ind_code", keyAndVal[1]);
+            }
+            builder.addParameter("_", System.currentTimeMillis());
+            URL url = new URL(builder.build());
+            String json = null;
+            while (true) {
+                try {
+                    json = request(url);
+                    if (json != null && json.indexOf("data") > 0)
+                        break;
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                    System.out.println("读取行业 " + industry.getIndustryName() + " 出现异常 " + url);
+                }
+            }
+            JsonNode jsonNode = mapper.readTree(json);
+            return parserJson(jsonNode);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            System.out.println("读取行业 " + industry.getIndustryName() + " 股票列表过程出现异常: " + ex.getMessage());
+            return new ArrayList<>(); // 兜底返回空列表
         }
-        builder.addParameter("_", System.currentTimeMillis());
-        URL url = new URL(builder.build());
-
-        String json = request(url);
-        JsonNode jsonNode = mapper.readTree(json);
-
-        return parserJson(jsonNode);
-
     }
 
 
     private List<Stock> parserJson(JsonNode node) {
-
         List<Stock> stocks = new ArrayList<>();
-
         JsonNode data = node.get("data");
         for (JsonNode jsonNode : data.get("list")) {
             Stock stock = new Stock(jsonNode.get("name").asText(), jsonNode.get("symbol").asText());

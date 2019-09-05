@@ -66,8 +66,6 @@ public abstract class AbstractRemoteService extends UnicastRemoteObject {
         return new HttpRequestHelper(webSite).request(url);
     }
 
-
-
     protected Object getRMIProxy() throws RemoteException, NotBoundException, MalformedURLException {
 
         Entry<String, Integer> entry = slaveChooser.chooseSlave();

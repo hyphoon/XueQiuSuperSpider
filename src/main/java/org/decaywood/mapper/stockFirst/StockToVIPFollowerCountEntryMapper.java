@@ -13,6 +13,9 @@ import org.jsoup.nodes.Document;
 import java.io.IOException;
 import java.net.URL;
 import java.rmi.RemoteException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Pattern;
 
 /**
  * @author: decaywood
@@ -23,11 +26,17 @@ import java.rmi.RemoteException;
  * 股票 -> 股票+雪球大V数量 映射器
  * 速度很慢，慎用
  */
-public class StockToVIPFollowerCountEntryMapper extends AbstractMapper <Stock, Entry<Stock, Integer>> {
+public class StockToVIPFollowerCountEntryMapper extends AbstractMapper <Stock, Entry<Stock, Map<String, Integer>>> {
+
+    /**
+     * 值Map的key
+     */
+    public static final String VALUE_KEY = "vipCount";
 
     private static final String REQUEST_PREFIX = URLMapper.MAIN_PAGE + "/S/";
     private static final String REQUEST_SUFFIX = "/follows?page=";
 
+    private static final Pattern PATTERN_A = Pattern.compile("^S[ZH][036].*$");
 
     private int VIPFriendsCountShreshold;
     private int latestK_NewFollowers;
@@ -57,12 +66,18 @@ public class StockToVIPFollowerCountEntryMapper extends AbstractMapper <Stock, E
     }
 
     @Override
-    public Entry<Stock, Integer> mapLogic(Stock stock) throws Exception {
+    public Entry<Stock, Map<String, Integer>> mapLogic(Stock stock) throws Exception {
+        Map<String, Integer> map = new HashMap<>();
+        map.put(VALUE_KEY, 0);
 
         if(stock == null || stock == EmptyObject.emptyStock)
-            return new Entry<>(EmptyObject.emptyStock, 0);
+            return new Entry<>(EmptyObject.emptyStock, map);
 
         String stockNo = stock.getStockNo();
+
+        if(!PATTERN_A.matcher(stockNo).matches()) { // 并非A股
+            return new Entry<>(EmptyObject.emptyStock, map);
+        }
 
         int count = 0;
 
@@ -72,34 +87,45 @@ public class StockToVIPFollowerCountEntryMapper extends AbstractMapper <Stock, E
             URL url = new URL(reqUrl);
 
             String content;
+            int errorCount = 0;
             while (true) {
                 try {
-
                     content = request(url);
-                    break;
-
+                    if (content != null && content.indexOf("follows=") > 0)
+                        break;
+                    else
+                        errorCount++;
+                    if (errorCount > 10) {
+                        System.out.println("获取关注列表出错 " + url.toString());
+                        break;
+                    }
                 } catch (Exception e) {
-                    System.out.println("Mapper: Network busy Retrying");
+                    System.out.println("Mapper: Network busy Retrying " + url.toString());
                 }
             }
 
-            JsonNode node = parseHtmlToJsonNode(content).get("followers");
-
-            if(node.size() == 0) break;
-
-            for (JsonNode jsonNode : node) {
-                int followersCount = jsonNode.get("followers_count").asInt();
-                if(followersCount > VIPFriendsCountShreshold) count++;
+            if (errorCount > 10) {
+                break;
             }
 
+            try {
+                JsonNode node = parseHtmlToJsonNode(content).get("followers");
+                if (node.size() == 0) break;
+                for (JsonNode jsonNode : node) {
+                    int followersCount = jsonNode.get("followers_count").asInt();
+                    if (followersCount > VIPFriendsCountShreshold) count++;
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                System.out.println("解析关注列表出错 " + url.toString());
+            }
         }
-
-        return new Entry<>(stock, count);
+        map.put(VALUE_KEY, count);
+        return new Entry<>(stock, map);
     }
 
 
     private JsonNode parseHtmlToJsonNode(String content) throws IOException {
-
         Document doc = Jsoup.parse(content);
         String indexer1 = "follows=";
         String indexer2 = ";seajs.use";
@@ -114,6 +140,5 @@ public class StockToVIPFollowerCountEntryMapper extends AbstractMapper <Stock, E
         index = builder.indexOf(indexer2);
         builder.delete(index, builder.length());
         return mapper.readTree(builder.toString());
-
     }
 }
