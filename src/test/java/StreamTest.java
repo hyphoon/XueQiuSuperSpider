@@ -100,6 +100,7 @@ public class StreamTest {
     //统计股票5000粉以上大V个数，并以行业分类股票 （耗时过长）
     @Test
     public void getStocksWithVipFollowersCount() throws RemoteException, ExecutionException, InterruptedException {
+        long begin = System.currentTimeMillis();
         CommissionIndustryCollector collector = new CommissionIndustryCollector();//搜集所有行业
         IndustryToStocksMapper mapper = new IndustryToStocksMapper();//搜集每个行业所有股票
         StockToVIPFollowerCountEntryMapper mapper1 = new StockToVIPFollowerCountEntryMapper(5000, 300);//搜集每个股票的粉丝
@@ -109,7 +110,7 @@ public class StreamTest {
         // 先匿名访问获得cookie
         collector.anonymous();
 
-        ForkJoinPool myPool = new ForkJoinPool(36);
+        ForkJoinPool myPool = new ForkJoinPool(72);
         myPool.submit(() -> {
             List<Entry<Stock, Map<String, Integer>>> res = collector.get()
                     .parallelStream() //并行流
@@ -123,6 +124,7 @@ public class StreamTest {
                 System.out.println(re.getKey().getStockName() + " -> 5000粉丝以上大V个数  " + re.getValue().get(StockToVIPFollowerCountEntryMapper.VALUE_KEY));
             }
         }).get();
+        System.out.println("共用时： " + (System.currentTimeMillis() - begin) / 1000);
     }
 
     //最赚钱组合最新持仓以及收益走势、大盘走势
