@@ -1,9 +1,6 @@
 package org.decaywood.utils;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
@@ -26,17 +23,6 @@ public class HttpRequestHelper {
                 .addToHeader("Referer", webSite)
                 .addToHeader("Cookie", FileLoader.loadCookie(webSite))
                 .addToHeader("Host", "xueqiu.com")
-                .addToHeader("Accept-Encoding", "gzip,deflate,sdch");
-    }
-
-
-    public HttpRequestHelper(String origin, String referer) {
-        this.config = new HashMap<>();
-        this.gzipDecode()
-                .addToHeader("Referer", referer)
-                .addToHeader("Origin", origin)
-                .addToHeader("Accept", "application/json, text/plain, */*")
-                .addToHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36")
                 .addToHeader("Accept-Encoding", "gzip,deflate,sdch");
     }
 
@@ -75,12 +61,28 @@ public class HttpRequestHelper {
                 httpURLConn.setRequestProperty(entry.getKey(), entry.getValue());
             httpURLConn.connect();
             InputStream in = httpURLConn.getInputStream();
-            if (gzip) in = new GZIPInputStream(in);
+            if (gzip) {
+                // 判断是否压缩流
+                BufferedInputStream bis = new BufferedInputStream(in);
+                bis.mark(2);
+                byte[] header = new byte[2];
+                int length = bis.read(header);
+                bis.reset();
+                int ss = (header[0] & 0xff) | ((header[1] & 0xff) << 8);
+                if (length != -1 && ss == GZIPInputStream.GZIP_MAGIC) {
+                    in = new GZIPInputStream(bis);
+                } else {
+                    in = bis;
+                }
+            }
             BufferedReader bd = new BufferedReader(new InputStreamReader(in));
             StringBuilder builder = new StringBuilder();
             String text;
             while ((text = bd.readLine()) != null) builder.append(text);
             return builder.toString();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            throw ex;
         } finally {
             if (httpURLConn != null) httpURLConn.disconnect();
         }

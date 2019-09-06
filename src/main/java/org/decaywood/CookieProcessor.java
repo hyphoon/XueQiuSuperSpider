@@ -2,8 +2,10 @@ package org.decaywood;
 
 import org.decaywood.utils.FileLoader;
 import org.decaywood.utils.RequestParaBuilder;
+import org.decaywood.utils.URLMapper;
 
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
@@ -63,5 +65,25 @@ public interface CookieProcessor {
         return (HttpURLConnection) url.openConnection();
     }
 
+    default void anonymous() {
+        HttpURLConnection connection = null;
+        try {
+            String website = URLMapper.MAIN_PAGE.toString();
+            URL url = new URL(website);
+            connection = (HttpURLConnection) url.openConnection();
+            connection.connect();
+            String cookie = connection.getHeaderFields().get("Set-Cookie")
+                    .stream()
+                    .map(x -> x.split(";")[0].concat(";"))
+                    .filter(x -> x.contains("token=") || x.contains("s="))
+                    .reduce("", String::concat);
+            FileLoader.updateCookie(cookie, website);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("匿名登录雪球过程异常：" + e.getMessage());
+        } finally {
+            if (connection != null) connection.disconnect();
+        }
+    }
 
 }

@@ -106,6 +106,9 @@ public class StreamTest {
         EntryToMacdCrossEntryMapper mapper2 = new EntryToMacdCrossEntryMapper(new Date());
         UserInfoToDBAcceptor acceptor = new UserInfoToDBAcceptor();//写入数据库
 
+        // 先匿名访问获得cookie
+        collector.anonymous();
+
         ForkJoinPool myPool = new ForkJoinPool(1);
         myPool.submit(() -> {
             List<Entry<Stock, Map<String, Integer>>> res = collector.get()
