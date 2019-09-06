@@ -80,9 +80,6 @@ public class HttpRequestHelper {
             String text;
             while ((text = bd.readLine()) != null) builder.append(text);
             return builder.toString();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            throw ex;
         } finally {
             if (httpURLConn != null) httpURLConn.disconnect();
         }
