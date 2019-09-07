@@ -37,8 +37,7 @@ public class IndustryToStocksMapper extends AbstractMapper<Industry, List<Stock>
 
     @Override
     public List<Stock> mapLogic(Industry industry) throws Exception {
-
-        if(industry == null || industry == EmptyObject.emptyIndustry)
+        if (industry == null || industry == EmptyObject.emptyIndustry)
             return new ArrayList<>();
 
         try {
@@ -59,26 +58,15 @@ public class IndustryToStocksMapper extends AbstractMapper<Industry, List<Stock>
             }
             builder.addParameter("_", System.currentTimeMillis());
             URL url = new URL(builder.build());
-            String json = null;
-            while (true) {
-                try {
-                    json = request(url);
-                    if (json != null && json.indexOf("data") > 0)
-                        break;
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                    System.out.println("读取行业 " + industry.getIndustryName() + " 出现异常 " + url);
-                }
-            }
+            String json = tryRequest(url, 10, s -> s != null && s.indexOf("data") > 0);
             JsonNode jsonNode = mapper.readTree(json);
             return parserJson(jsonNode);
         } catch (Exception ex) {
             ex.printStackTrace();
-            System.out.println("读取行业 " + industry.getIndustryName() + " 股票列表过程出现异常: " + ex.getMessage());
+            System.err.println("读取行业 " + industry.getIndustryName() + " 股票列表过程出现异常: " + ex.getMessage());
             return new ArrayList<>(); // 兜底返回空列表
         }
     }
-
 
     private List<Stock> parserJson(JsonNode node) {
         List<Stock> stocks = new ArrayList<>();
@@ -88,8 +76,5 @@ public class IndustryToStocksMapper extends AbstractMapper<Industry, List<Stock>
             stocks.add(stock);
         }
         return stocks;
-
     }
-
-
 }

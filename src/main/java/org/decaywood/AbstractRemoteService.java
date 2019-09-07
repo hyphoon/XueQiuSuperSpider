@@ -16,6 +16,7 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.function.Predicate;
 
 /**
  * @author: decaywood
@@ -64,6 +65,10 @@ public abstract class AbstractRemoteService extends UnicastRemoteObject {
 
     protected String request(URL url) throws IOException {
         return new HttpRequestHelper(webSite).request(url);
+    }
+
+    protected String tryRequest(URL url, int tryCount, Predicate<String> acceptable) throws IOException {
+        return new HttpRequestHelper(webSite).tryRequest(url, tryCount, acceptable);
     }
 
     protected Object getRMIProxy() throws RemoteException, NotBoundException, MalformedURLException {

@@ -66,18 +66,7 @@ public class EntryToMacdCrossEntryMapper extends AbstractMapper<Entry<Stock, Map
                         .addParameter("indicator", "macd");
 
                 URL url = new URL(builder.build());
-
-                String json = null;
-                while (true) {
-                    try {
-                        json = request(url);
-                        if (json != null && json.indexOf("data") > 0)
-                            break;
-                    } catch (Exception ex) {
-                        ex.printStackTrace();
-                        System.out.println("读取MACD " + stock.getStockName() + " 出现异常 " + url);
-                    }
-                }
+                String json = tryRequest(url, 10, s -> s != null && s.indexOf("data") > 0);
                 JsonNode node = mapper.readTree(json).get("data").get("item");
                 processStock(stock, node);
                 trend = stock.getStockTrend();

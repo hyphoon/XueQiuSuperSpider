@@ -72,12 +72,12 @@ public interface CookieProcessor {
             URL url = new URL(website);
             connection = (HttpURLConnection) url.openConnection();
             connection.connect();
-            String cookie = connection.getHeaderFields().get("Set-Cookie")
-                    .stream()
-                    .map(x -> x.split(";")[0].concat(";"))
-                    .filter(x -> x.contains("token=") || x.contains("s="))
-                    .reduce("", String::concat);
-            FileLoader.updateCookie(cookie, website);
+//            String cookie = connection.getHeaderFields().get("Set-Cookie")
+//                    .stream()
+//                    .map(x -> x.split(";")[0].concat(";"))
+//                    .filter(x -> x.contains("token=") || x.contains("s="))
+//                    .reduce("", String::concat);
+//            FileLoader.updateCookie(cookie, website);
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("匿名登录雪球过程异常：" + e.getMessage());

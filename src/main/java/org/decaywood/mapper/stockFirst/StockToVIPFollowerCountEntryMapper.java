@@ -69,45 +69,19 @@ public class StockToVIPFollowerCountEntryMapper extends AbstractMapper <Stock, E
     public Entry<Stock, Map<String, Integer>> mapLogic(Stock stock) throws Exception {
         Map<String, Integer> map = new HashMap<>();
         map.put(VALUE_KEY, 0);
-
         if(stock == null || stock == EmptyObject.emptyStock)
             return new Entry<>(EmptyObject.emptyStock, map);
 
         String stockNo = stock.getStockNo();
-
         if(!PATTERN_A.matcher(stockNo).matches()) { // 并非A股
             return new Entry<>(EmptyObject.emptyStock, map);
         }
 
         int count = 0;
-
         for (int i = 1; i < latestK_NewFollowers; i++) {
-
             String reqUrl = REQUEST_PREFIX + stockNo + REQUEST_SUFFIX + i;
             URL url = new URL(reqUrl);
-
-            String content;
-            int errorCount = 0;
-            while (true) {
-                try {
-                    content = request(url);
-                    if (content != null && content.indexOf("follows=") > 0)
-                        break;
-                    else
-                        errorCount++;
-                    if (errorCount > 10) {
-                        System.out.println("获取关注列表出错 " + url.toString());
-                        break;
-                    }
-                } catch (Exception e) {
-                    System.out.println("Mapper: Network busy Retrying " + url.toString());
-                }
-            }
-
-            if (errorCount > 10) {
-                break;
-            }
-
+            String content = tryRequest(url, 10, s -> s != null && s.indexOf("follows=") > 0);
             try {
                 JsonNode node = parseHtmlToJsonNode(content).get("followers");
                 if (node.size() == 0) break;

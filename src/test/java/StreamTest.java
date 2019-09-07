@@ -17,6 +17,9 @@ import org.decaywood.mapper.stockFirst.StockToVIPFollowerCountEntryMapper;
 import org.decaywood.utils.MathUtils;
 import org.junit.Test;
 
+import java.net.CookieHandler;
+import java.net.CookieManager;
+import java.net.CookiePolicy;
 import java.net.URL;
 import java.rmi.RemoteException;
 import java.util.*;
@@ -100,17 +103,18 @@ public class StreamTest {
     //统计股票5000粉以上大V个数，并以行业分类股票 （耗时过长）
     @Test
     public void getStocksWithVipFollowersCount() throws RemoteException, ExecutionException, InterruptedException {
+        CookieHandler.setDefault(new CookieManager(null, CookiePolicy.ACCEPT_ALL));
         long begin = System.currentTimeMillis();
         CommissionIndustryCollector collector = new CommissionIndustryCollector();//搜集所有行业
         IndustryToStocksMapper mapper = new IndustryToStocksMapper();//搜集每个行业所有股票
-        StockToVIPFollowerCountEntryMapper mapper1 = new StockToVIPFollowerCountEntryMapper(5000, 300);//搜集每个股票的粉丝
+        StockToVIPFollowerCountEntryMapper mapper1 = new StockToVIPFollowerCountEntryMapper(5000, 200);//搜集每个股票的粉丝
         EntryToMacdCrossEntryMapper mapper2 = new EntryToMacdCrossEntryMapper(new Date());
         UserInfoToDBAcceptor acceptor = new UserInfoToDBAcceptor();//写入数据库
 
         // 先匿名访问获得cookie
         collector.anonymous();
 
-        ForkJoinPool myPool = new ForkJoinPool(72);
+        ForkJoinPool myPool = new ForkJoinPool(12);
         myPool.submit(() -> {
             List<Entry<Stock, Map<String, Integer>>> res = collector.get()
                     .parallelStream() //并行流

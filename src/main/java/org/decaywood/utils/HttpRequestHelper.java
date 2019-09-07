@@ -5,6 +5,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Predicate;
 import java.util.zip.GZIPInputStream;
 
 /**
@@ -50,7 +51,6 @@ public class HttpRequestHelper {
         return request(url, this.config);
     }
 
-
     public String request(URL url, Map<String, String> config) throws IOException {
         HttpURLConnection httpURLConn = null;
         try {
@@ -85,5 +85,30 @@ public class HttpRequestHelper {
         }
     }
 
-
+    /**
+     * 自动重试请求
+     * @param url
+     * @param tryCount
+     * @return
+     * @throws IOException
+     */
+    public String tryRequest(URL url, int tryCount, Predicate<String> acceptable) throws IOException {
+        int errorCount = 0;
+        while (errorCount < tryCount) {
+            try {
+                String rst = request(url);
+                if (acceptable.test(rst)) {
+                    return rst;
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+            errorCount++;
+            System.out.println("请求失败再尝试： " + url);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {}
+        }
+        throw new IOException("尝试了" + errorCount + "次后请求还是失败：" + url);
+    }
 }
