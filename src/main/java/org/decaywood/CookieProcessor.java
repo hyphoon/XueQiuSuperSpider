@@ -16,32 +16,32 @@ public interface CookieProcessor {
 
 
     default void updateCookie(String website) throws Exception {
-
-        GlobalSystemConfigLoader.loadConfig();
-
-        String areacode = System.getProperty("areaCode");
-        String userID = System.getProperty("userID");
-        String passwd = System.getProperty("password");
-        boolean rememberMe = Boolean.parseBoolean(System.getProperty("rememberMe"));
-
-        HttpURLConnection connection = null;
-        if (userID != null && passwd != null) {
-            connection = login(areacode, userID, passwd, rememberMe);
-        }
-        try {
-            connection = connection == null ?
-                    (HttpURLConnection) new URL(website).openConnection() : connection;
-            connection.connect();
-
-            String cookie = connection.getHeaderFields().get("Set-Cookie")
-                    .stream()
-                    .map(x -> x.split(";")[0].concat(";"))
-                    .filter(x -> x.contains("token=") || x.contains("s="))
-                    .reduce("", String::concat);
-            FileLoader.updateCookie(cookie, website);
-        } finally {
-            if (connection != null) connection.disconnect();
-        }
+        anonymous();
+//        GlobalSystemConfigLoader.loadConfig();
+//
+//        String areacode = System.getProperty("areaCode");
+//        String userID = System.getProperty("userID");
+//        String passwd = System.getProperty("password");
+//        boolean rememberMe = Boolean.parseBoolean(System.getProperty("rememberMe"));
+//
+//        HttpURLConnection connection = null;
+//        if (userID != null && passwd != null) {
+//            connection = login(areacode, userID, passwd, rememberMe);
+//        }
+//        try {
+//            connection = connection == null ?
+//                    (HttpURLConnection) new URL(website).openConnection() : connection;
+//            connection.connect();
+//
+//            String cookie = connection.getHeaderFields().get("Set-Cookie")
+//                    .stream()
+//                    .map(x -> x.split(";")[0].concat(";"))
+//                    .filter(x -> x.contains("token=") || x.contains("s="))
+//                    .reduce("", String::concat);
+//            FileLoader.updateCookie(cookie, website);
+//        } finally {
+//            if (connection != null) connection.disconnect();
+//        }
 
     }
 
