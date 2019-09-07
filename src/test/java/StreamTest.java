@@ -107,7 +107,7 @@ public class StreamTest {
         long begin = System.currentTimeMillis();
         CommissionIndustryCollector collector = new CommissionIndustryCollector();//搜集所有行业
         IndustryToStocksMapper mapper = new IndustryToStocksMapper();//搜集每个行业所有股票
-        StockToVIPFollowerCountEntryMapper mapper1 = new StockToVIPFollowerCountEntryMapper(5000, 200);//搜集每个股票的粉丝
+        StockToVIPFollowerCountEntryMapper mapper1 = new StockToVIPFollowerCountEntryMapper(5000, 100);//搜集每个股票的粉丝
         EntryToMacdCrossEntryMapper mapper2 = new EntryToMacdCrossEntryMapper(new Date());
         UserInfoToDBAcceptor acceptor = new UserInfoToDBAcceptor();//写入数据库
 
