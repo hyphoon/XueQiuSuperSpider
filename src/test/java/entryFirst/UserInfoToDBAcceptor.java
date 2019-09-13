@@ -3,8 +3,6 @@ package entryFirst;
 import org.decaywood.acceptor.AbstractAcceptor;
 import org.decaywood.entity.Entry;
 import org.decaywood.entity.Stock;
-import org.decaywood.mapper.entryFirst.EntryToMacdCrossEntryMapper;
-import org.decaywood.mapper.stockFirst.StockToVIPFollowerCountEntryMapper;
 import org.decaywood.utils.DatabaseAccessor;
 import org.decaywood.utils.EmptyObject;
 
@@ -23,7 +21,7 @@ import java.util.Map;
 /**
  * 示例类， 接收信息放入数据库
  */
-public class UserInfoToDBAcceptor extends AbstractAcceptor<Entry<Stock, Map<String, Integer>>> {
+public class UserInfoToDBAcceptor extends AbstractAcceptor<Entry<Stock, Map<String, Object>>> {
 
     public UserInfoToDBAcceptor() throws RemoteException {}
 
@@ -37,6 +35,7 @@ public class UserInfoToDBAcceptor extends AbstractAcceptor<Entry<Stock, Map<Stri
      `vip_id` VARCHAR(45) NULL,
      `vip_count` INT NULL,
      'macd_cross' INT NULL,
+     'industry_desc' VARCHAR(1000) NULL,
      PRIMARY KEY (`id`),
      UNIQUE INDEX `id_UNIQUE` (`id` ASC),
      UNIQUE INDEX `stock_id_UNIQUE` (`stock_id` ASC),
@@ -45,18 +44,19 @@ public class UserInfoToDBAcceptor extends AbstractAcceptor<Entry<Stock, Map<Stri
      */
 
     @Override
-    protected void consumLogic(Entry<Stock, Map<String, Integer>> entry) throws Exception{
+    protected void consumLogic(Entry<Stock, Map<String, Object>> entry) throws Exception{
         Stock stock = entry.getKey();
         if (stock != EmptyObject.emptyStock) {
-            Map<String, Integer> map = entry.getValue();
-            Integer k = map.get(StockToVIPFollowerCountEntryMapper.VALUE_KEY);
-            Integer m = map.get(EntryToMacdCrossEntryMapper.VALUE_KEY);
+            Map<String, Object> map = entry.getValue();
+            Integer k = (Integer) map.get(Entry.VIP_COUNT_KEY);
+            Integer m = (Integer) map.get(Entry.MACD_CROSS_KEY);
+            String md = (String) map.get(Entry.INDUSTRY_DESC);
             Connection connection = DatabaseAccessor.Holder.ACCESSOR.getConnection();
             StringBuilder builder = new StringBuilder();
             builder.append("insert into stock_vip_followers ")
-                    .append("(stock_id, stock_name, vip_count, macd_cross) ")
-                    .append("values (?, ?, ?, ?)")
-                    .append("on duplicate key update vip_count=?, macd_cross=?");
+                    .append("(stock_id, stock_name, vip_count, macd_cross, industry_desc) ")
+                    .append("values (?, ?, ?, ?, ?)")   // 1-5
+                    .append("on duplicate key update vip_count=?, macd_cross=?, industry_desc=?");  // 6-8
             String sql = builder.toString();
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, stock.getStockNo());
@@ -67,12 +67,13 @@ public class UserInfoToDBAcceptor extends AbstractAcceptor<Entry<Stock, Map<Stri
             } else {
                 statement.setInt(4, m);
             }
-            statement.setInt(5, k);
+            statement.setString(6, md);
             if (m == null) {
-                statement.setNull(6, Types.INTEGER);
+                statement.setNull(7, Types.INTEGER);
             } else {
-                statement.setInt(6, m);
+                statement.setInt(7, m);
             }
+            statement.setString(8, md);
             statement.execute();
             DatabaseAccessor.Holder.ACCESSOR.returnConnection(connection);
         }

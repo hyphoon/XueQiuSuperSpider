@@ -32,7 +32,14 @@ public enum URLMapper {
 
     /*-------------------------------- Leo -----------------------------------*/
     // 个股K线数据， 样例： https://stock.xueqiu.com/v5/stock/chart/kline.json?symbol=SH600028&begin=1567676507378&period=day&type=before&count=-142&indicator=kline,pe,pb,ps,pcf,market_capital,agt,ggt,balance
-    STOCK_CHART_JSON("https://stock.xueqiu.com/v5/stock/chart/kline.json");
+    STOCK_CHART_JSON("https://stock.xueqiu.com/v5/stock/chart/kline.json"),
+
+    // 板块, 样例 https://xueqiu.com/S/BK0001,https://xueqiu.com/S/BK0501,https://xueqiu.com/S/BK0601,https://xueqiu.com/S/BK0901
+    INDUSTRY_PAGE("https://xueqiu.com/S/BK"),
+
+    // 板块相关个股， 样例 https://stock.xueqiu.com/v5/stock/forum/stocks.json?ind_code=BK0001
+    INDUSTRY_STOCK_JSON("https://stock.xueqiu.com/v5/stock/forum/stocks.json"),
+    ;
 
 
     URLMapper(String URL) {

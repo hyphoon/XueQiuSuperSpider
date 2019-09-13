@@ -1,6 +1,5 @@
 import entryFirst.UserInfoToDBAcceptor;
 import mapperTest.TestCaseGenerator;
-import org.apache.commons.lang3.time.DateUtils;
 import org.decaywood.collector.*;
 import org.decaywood.entity.*;
 import org.decaywood.entity.trend.StockTrend;
@@ -116,7 +115,7 @@ public class StreamTest {
 
         ForkJoinPool myPool = new ForkJoinPool(12);
         myPool.submit(() -> {
-            List<Entry<Stock, Map<String, Integer>>> res = collector.get()
+            List<Entry<Stock, Map<String, Object>>> res = collector.get()
                     .parallelStream() //并行流
                     .map(mapper)
                     .flatMap(Collection::stream)
@@ -124,8 +123,8 @@ public class StreamTest {
                     .map(mapper2)
                     .peek(acceptor)
                     .collect(Collectors.toList());
-            for (Entry<Stock, Map<String, Integer>> re : res) {
-                System.out.println(re.getKey().getStockName() + " -> 5000粉丝以上大V个数  " + re.getValue().get(StockToVIPFollowerCountEntryMapper.VALUE_KEY));
+            for (Entry<Stock, Map<String, Object>> re : res) {
+                System.out.println(re.getKey().getStockName() + " -> 5000粉丝以上大V个数  " + re.getValue().get(Entry.VIP_COUNT_KEY));
             }
         }).get();
         System.out.println("共用时： " + (System.currentTimeMillis() - begin) / 1000);

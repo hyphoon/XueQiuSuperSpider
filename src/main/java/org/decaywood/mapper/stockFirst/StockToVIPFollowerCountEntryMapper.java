@@ -26,12 +26,7 @@ import java.util.regex.Pattern;
  * 股票 -> 股票+雪球大V数量 映射器
  * 速度很慢，慎用
  */
-public class StockToVIPFollowerCountEntryMapper extends AbstractMapper <Stock, Entry<Stock, Map<String, Integer>>> {
-
-    /**
-     * 值Map的key
-     */
-    public static final String VALUE_KEY = "vipCount";
+public class StockToVIPFollowerCountEntryMapper extends AbstractMapper <Stock, Entry<Stock, Map<String, Object>>> {
 
     private static final String REQUEST_PREFIX = URLMapper.MAIN_PAGE + "/S/";
     private static final String REQUEST_SUFFIX = "/follows?page=";
@@ -66,9 +61,9 @@ public class StockToVIPFollowerCountEntryMapper extends AbstractMapper <Stock, E
     }
 
     @Override
-    public Entry<Stock, Map<String, Integer>> mapLogic(Stock stock) throws Exception {
-        Map<String, Integer> map = new HashMap<>();
-        map.put(VALUE_KEY, 0);
+    public Entry<Stock, Map<String, Object>> mapLogic(Stock stock) throws Exception {
+        Map<String, Object> map = new HashMap<>();
+        map.put(Entry.VIP_COUNT_KEY, 0);
         if(stock == null || stock == EmptyObject.emptyStock)
             return new Entry<>(EmptyObject.emptyStock, map);
 
@@ -94,7 +89,7 @@ public class StockToVIPFollowerCountEntryMapper extends AbstractMapper <Stock, E
                 System.out.println("解析关注列表出错 " + url.toString());
             }
         }
-        map.put(VALUE_KEY, count);
+        map.put(Entry.VIP_COUNT_KEY, count);
         return new Entry<>(stock, map);
     }
 

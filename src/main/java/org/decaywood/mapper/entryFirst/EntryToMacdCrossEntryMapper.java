@@ -18,12 +18,7 @@ import java.util.*;
 /**
  * 股票 -> 最近一次Macd金叉的周期
  */
-public class EntryToMacdCrossEntryMapper extends AbstractMapper<Entry<Stock, Map<String, Integer>>, Entry<Stock, Map<String, Integer>>> {
-
-    /**
-     * 值Map的key
-     */
-    public static final String VALUE_KEY = "macdCross";
+public class EntryToMacdCrossEntryMapper extends AbstractMapper<Entry<Stock, Map<String, Object>>, Entry<Stock, Map<String, Object>>> {
 
     private int count;
     private Date to;
@@ -47,9 +42,9 @@ public class EntryToMacdCrossEntryMapper extends AbstractMapper<Entry<Stock, Map
     }
 
     @Override
-    public Entry<Stock, Map<String, Integer>> mapLogic(Entry<Stock, Map<String, Integer>> entry) throws Exception {
-        Map<String, Integer> map = entry.getValue();
-        map.put(VALUE_KEY, null);
+    public Entry<Stock, Map<String, Object>> mapLogic(Entry<Stock, Map<String, Object>> entry) throws Exception {
+        Map<String, Object> map = entry.getValue();
+        map.put(Entry.MACD_CROSS_KEY, null);
         Stock stock = entry.getKey();
         if(stock == null || stock == EmptyObject.emptyStock)
             return entry;
@@ -88,7 +83,7 @@ public class EntryToMacdCrossEntryMapper extends AbstractMapper<Entry<Stock, Map
                     count++;
                 }
                 if (count > 0) {
-                    map.put(VALUE_KEY, count);
+                    map.put(Entry.MACD_CROSS_KEY, count);
                 }
             }
         } catch (Exception ex) {

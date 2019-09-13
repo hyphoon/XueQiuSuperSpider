@@ -6,6 +6,20 @@ package org.decaywood.entity;
  */
 public class Entry<K, V> {
 
+    /**
+     * MACD 金叉天数 key
+     */
+    public static final String MACD_CROSS_KEY = "macdCross";
+    /**
+     * 高粉丝数关注人数key
+     */
+    public static final String VIP_COUNT_KEY = "vipCount";
+
+    /**
+     * 板块说明
+     */
+    public static final String INDUSTRY_DESC = "industryDesc";
+
     private final K key;
     private final V value;
 

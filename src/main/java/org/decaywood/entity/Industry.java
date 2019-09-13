@@ -14,12 +14,22 @@ public class Industry implements DeepCopy<Industry> {
 
     private final String industryInfo;//板块代码
 
+    /**
+     * MACD 金叉天数
+     */
+    private int macdCross; // MACD 金叉天数
+
 
     public Industry(final String industryName, final String industrySiteURL) {
         this.industryName = industryName;
         this.industryInfo = industrySiteURL;
     }
 
+    public Industry(final String industryName, final String industrySiteURL, final int macdCross) {
+        this.industryName = industryName;
+        this.industryInfo = industrySiteURL;
+        this.macdCross = macdCross;
+    }
 
 
     public String getIndustryName() {
@@ -28,6 +38,14 @@ public class Industry implements DeepCopy<Industry> {
 
     public String getIndustryInfo() {
         return industryInfo;
+    }
+
+    public int getMacdCross() {
+        return macdCross;
+    }
+
+    public void setMacdCross(int macdCross) {
+        this.macdCross = macdCross;
     }
 
     @Override
@@ -55,6 +73,6 @@ public class Industry implements DeepCopy<Industry> {
 
     @Override
     public Industry copy() {
-        return new Industry(industryName, industryInfo);
+        return new Industry(industryName, industryInfo, macdCross);
     }
 }

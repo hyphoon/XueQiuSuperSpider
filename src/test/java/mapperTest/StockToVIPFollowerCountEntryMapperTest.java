@@ -22,8 +22,8 @@ public class StockToVIPFollowerCountEntryMapperTest {
         List<Stock> stocks = TestCaseGenerator.generateStocks();
         StockToVIPFollowerCountEntryMapper mapper = new StockToVIPFollowerCountEntryMapper();
         stocks.parallelStream().forEach(x -> {
-            Entry<Stock, Map<String, Integer>> count = mapper.apply(x);
-            System.out.println(x.getStockName() + "粉丝过万的关注者人数为： " + count.getValue().get(StockToVIPFollowerCountEntryMapper.VALUE_KEY) + " 人");
+            Entry<Stock, Map<String, Object>> count = mapper.apply(x);
+            System.out.println(x.getStockName() + "粉丝过万的关注者人数为： " + count.getValue().get(Entry.VIP_COUNT_KEY) + " 人");
         });
     }
 }
