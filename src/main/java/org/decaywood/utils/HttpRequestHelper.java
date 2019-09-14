@@ -100,6 +100,9 @@ public class HttpRequestHelper {
                 if (acceptable.test(rst)) {
                     return rst;
                 }
+            } catch (FileNotFoundException nfex) {
+                System.out.println("页面不存在：" + url.toString());
+                throw nfex;
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
