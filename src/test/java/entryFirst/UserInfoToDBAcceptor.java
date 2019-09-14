@@ -67,7 +67,8 @@ public class UserInfoToDBAcceptor extends AbstractAcceptor<Entry<Stock, Map<Stri
             } else {
                 statement.setInt(4, m);
             }
-            statement.setString(6, md);
+            statement.setString(5, md);
+            statement.setInt(6, k);
             if (m == null) {
                 statement.setNull(7, Types.INTEGER);
             } else {

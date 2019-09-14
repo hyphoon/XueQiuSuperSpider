@@ -16,7 +16,7 @@ import java.rmi.RemoteException;
 import java.util.*;
 
 /**
- * 股票 -> 最近一次Macd金叉的周期
+ * entry -> 最近一次Macd金叉的周期
  */
 public class EntryToMacdCrossEntryMapper extends AbstractMapper<Entry<Stock, Map<String, Object>>, Entry<Stock, Map<String, Object>>> {
 

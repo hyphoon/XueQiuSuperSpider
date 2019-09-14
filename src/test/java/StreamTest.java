@@ -7,6 +7,7 @@ import org.decaywood.filter.PageKeyFilter;
 import org.decaywood.mapper.cubeFirst.CubeToCubeWithLastBalancingMapper;
 import org.decaywood.mapper.cubeFirst.CubeToCubeWithTrendMapper;
 import org.decaywood.mapper.dateFirst.DateToLongHuBangStockMapper;
+import org.decaywood.mapper.entryFirst.EntryToIndustryEntryMapper;
 import org.decaywood.mapper.entryFirst.EntryToMacdCrossEntryMapper;
 import org.decaywood.mapper.industryFirst.IndustryToStocksMapper;
 import org.decaywood.mapper.stockFirst.StockToLongHuBangMapper;
@@ -104,14 +105,19 @@ public class StreamTest {
     public void getStocksWithVipFollowersCount() throws RemoteException, ExecutionException, InterruptedException {
         CookieHandler.setDefault(new CookieManager(null, CookiePolicy.ACCEPT_ALL));
         long begin = System.currentTimeMillis();
+
+
+        XuQiuIndustryCollector industryCollector = new XuQiuIndustryCollector(null);
+        // 先匿名访问获得cookie
+        industryCollector.anonymous();
+        Map<Industry, List<String>> industryListMap = industryCollector.get();//每个行业的MACD金叉天数及相关股票编码
+
         CommissionIndustryCollector collector = new CommissionIndustryCollector();//搜集所有行业
         IndustryToStocksMapper mapper = new IndustryToStocksMapper();//搜集每个行业所有股票
         StockToVIPFollowerCountEntryMapper mapper1 = new StockToVIPFollowerCountEntryMapper(5000, 100);//搜集每个股票的粉丝
-        EntryToMacdCrossEntryMapper mapper2 = new EntryToMacdCrossEntryMapper(new Date());
+        EntryToMacdCrossEntryMapper mapper2 = new EntryToMacdCrossEntryMapper(new Date());//MACD金叉天数
+        EntryToIndustryEntryMapper mapper3 = new EntryToIndustryEntryMapper(industryListMap);//相关板块和金叉天数
         UserInfoToDBAcceptor acceptor = new UserInfoToDBAcceptor();//写入数据库
-
-        // 先匿名访问获得cookie
-        collector.anonymous();
 
         ForkJoinPool myPool = new ForkJoinPool(12);
         myPool.submit(() -> {
@@ -121,6 +127,7 @@ public class StreamTest {
                     .flatMap(Collection::stream)
                     .map(mapper1)
                     .map(mapper2)
+                    .map(mapper3)
                     .peek(acceptor)
                     .collect(Collectors.toList());
             for (Entry<Stock, Map<String, Object>> re : res) {
