@@ -80,7 +80,7 @@ public class XuQiuIndustryCollector extends AbstractCollector<Map<Industry, List
                 // 读取相关股票编码
                 List<String> stockNoList = readStock(industry);
                 res.put(industry, stockNoList);
-                System.out.println("完成 " + "0" + i + jIdx);
+//                System.out.println("完成 " + "0" + i + jIdx);
             }
         }
         return res;
