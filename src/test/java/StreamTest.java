@@ -119,7 +119,7 @@ public class StreamTest {
         EntryToIndustryEntryMapper mapper3 = new EntryToIndustryEntryMapper(industryListMap);//相关板块和金叉天数
         UserInfoToDBAcceptor acceptor = new UserInfoToDBAcceptor();//写入数据库
 
-        ForkJoinPool myPool = new ForkJoinPool(12);
+        ForkJoinPool myPool = new ForkJoinPool(8);
         myPool.submit(() -> {
             List<Entry<Stock, Map<String, Object>>> res = collector.get()
                     .parallelStream() //并行流
